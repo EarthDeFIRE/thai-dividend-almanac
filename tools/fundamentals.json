@@ -1,0 +1,229 @@
+{
+ "_doc": "Tier-2 layer: refresh after each earnings season (4x/year). The daily cron NEVER touches these.",
+ "updated": "2026-09-22",
+ "stocks": {
+  "SCB": {
+   "symbol": "SCB.BK",
+   "eps_ttm": 12.9232,
+   "bvps": 143.14,
+   "dps_ttm": 11.2836,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "KBANK": {
+   "symbol": "KBANK.BK",
+   "eps_ttm": 21.7722,
+   "bvps": 245.12,
+   "dps_ttm": 14.0094,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "note": "seed 154 ต่ำกว่า 52W low 163 → ราคา seed ผิดแน่นอน"
+  },
+  "KKP": {
+   "symbol": "KKP.BK",
+   "eps_ttm": 8.7407,
+   "bvps": 80.2,
+   "dps_ttm": 5.4044,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "KTB": {
+   "symbol": "KTB.BK",
+   "eps_ttm": 3.5742,
+   "bvps": 32.5,
+   "dps_ttm": 2.0839,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "info": "yield คำนวณจาก DPS TTM 2.08 (TradingView)"
+  },
+  "TISCO": {
+   "symbol": "TISCO.BK",
+   "eps_ttm": 8.5793,
+   "bvps": null,
+   "dps_ttm": 7.775,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "BBL": {
+   "symbol": "BBL.BK",
+   "eps_ttm": 22.0158,
+   "bvps": 303.61,
+   "dps_ttm": 10.166,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "info": "P/BV ใช้ BV 303.61 จาก AiO"
+  },
+  "TCAP": {
+   "symbol": "TCAP.BK",
+   "eps_ttm": 8.3333,
+   "bvps": null,
+   "dps_ttm": 3.5026,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "TIDLOR": {
+   "symbol": "TIDLOR.BK",
+   "eps_ttm": 1.9296,
+   "bvps": null,
+   "dps_ttm": 1.0426,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "note": "yield TTM 5.8% ขัดกับ seed 1.8% — ตรวจว่ารวมปันผลหุ้น/พิเศษหรือไม่"
+  },
+  "GULF": {
+   "symbol": "GULF.BK",
+   "eps_ttm": 2.5196,
+   "bvps": null,
+   "dps_ttm": 1.0492,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "CPALL": {
+   "symbol": "CPALL.BK",
+   "eps_ttm": 3.4213,
+   "bvps": 16.63,
+   "dps_ttm": 1.6513,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "ADVANC": {
+   "symbol": "ADVANC.BK",
+   "eps_ttm": 18.0021,
+   "bvps": 17.58,
+   "dps_ttm": 34.2886,
+   "dps_recurring": 16.7118,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "note": "Yield TTM 9.9% รวมปันผลพิเศษ · เครื่องคิดใช้ dps_recurring"
+  },
+  "BDMS": {
+   "symbol": "BDMS.BK",
+   "eps_ttm": 0.96,
+   "bvps": null,
+   "dps_ttm": 0.7542,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "WHAUP": {
+   "symbol": "WHAUP.BK",
+   "eps_ttm": 0.3901,
+   "bvps": null,
+   "dps_ttm": 0.2545,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "PTT": {
+   "symbol": "PTT.BK",
+   "eps_ttm": 4.3412,
+   "bvps": null,
+   "dps_ttm": 2.1122,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "PRM": {
+   "symbol": "PRM.BK",
+   "eps_ttm": 0.9396,
+   "bvps": null,
+   "dps_ttm": 0.4949,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "KTC": {
+   "symbol": "KTC.BK",
+   "eps_ttm": 3.2714,
+   "bvps": null,
+   "dps_ttm": 1.8056,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "TTW": {
+   "symbol": "TTW.BK",
+   "eps_ttm": 0.7799,
+   "bvps": null,
+   "dps_ttm": 0.606,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "SIRI": {
+   "symbol": "SIRI.BK",
+   "eps_ttm": 0.25,
+   "bvps": null,
+   "dps_ttm": 0.1301,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "AP": {
+   "symbol": "AP.BK",
+   "eps_ttm": 1.4021,
+   "bvps": 14.75,
+   "dps_ttm": 0.5199,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "HMPRO": {
+   "symbol": "HMPRO.BK",
+   "eps_ttm": 0.46,
+   "bvps": null,
+   "dps_ttm": 0.3862,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "SABINA": {
+   "symbol": "SABINA.BK",
+   "eps_ttm": 1.1823,
+   "bvps": 5.25,
+   "dps_ttm": null,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "note": "ไม่มี DPS ที่ verify ได้ — ปล่อย null ไว้จนกว่าจะเช็คจาก SET"
+  },
+  "ICHI": {
+   "symbol": "ICHI.BK",
+   "eps_ttm": 0.9773,
+   "bvps": 4.25,
+   "dps_ttm": 1.0999,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)",
+   "note": "payout implied >100% — ปันผลเกินกำไร TTM"
+  },
+  "SCC": {
+   "symbol": "SCC.BK",
+   "eps_ttm": 11.1581,
+   "bvps": null,
+   "dps_ttm": 5.8872,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  },
+  "RATCH": {
+   "symbol": "RATCH.BK",
+   "eps_ttm": 2.5606,
+   "bvps": null,
+   "dps_ttm": 1.6226,
+   "dps_recurring": null,
+   "fund_asof": "2026-09-22",
+   "fund_src": "AiO + TradingView (Q2/2569 TTM)"
+  }
+ }
+}

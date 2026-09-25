@@ -1,0 +1,953 @@
+{
+ "note": "SEED history from Dossier II data export (18 May 2026) — NOT verified",
+ "years": [
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "stocks": {
+  "SCB": {
+   "name": "SCB X Holdings",
+   "sector": "Banking",
+   "tier": "A",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    4.0,
+    4.06,
+    6.69,
+    10.34,
+    10.44,
+    11.28
+   ],
+   "prices": [
+    150.0,
+    168.0,
+    138.0,
+    122.0,
+    88.0,
+    116.0,
+    105.0,
+    96.0,
+    116.0,
+    131.5
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 131.5,
+    "div_yield_pct": 8.58,
+    "fwd_pe": 9.3,
+    "pb": 0.85,
+    "payout_pct": 80
+   }
+  },
+  "KBANK": {
+   "name": "Kasikornbank",
+   "sector": "Banking",
+   "tier": "A",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    4.0,
+    4.0,
+    4.0,
+    5.0,
+    2.5,
+    3.25,
+    3.25,
+    5.0,
+    12.5,
+    9.5
+   ],
+   "prices": [
+    180.0,
+    220.0,
+    188.0,
+    152.0,
+    110.0,
+    138.0,
+    125.0,
+    132.0,
+    153.0,
+    154.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 154.0,
+    "div_yield_pct": 6.17,
+    "fwd_pe": 6.8,
+    "pb": 0.65,
+    "payout_pct": 41
+   }
+  },
+  "KKP": {
+   "name": "Kiatnakin Phatra",
+   "sector": "Banking",
+   "tier": "C",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    4.0,
+    6.0,
+    5.0,
+    4.5,
+    2.75,
+    3.0,
+    3.95,
+    2.75,
+    3.0,
+    4.25
+   ],
+   "prices": [
+    62.5,
+    69.5,
+    72.0,
+    66.5,
+    46.0,
+    41.5,
+    73.75,
+    50.25,
+    52.5,
+    68.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 81.75,
+    "div_yield_pct": 5.14,
+    "fwd_pe": 10.2,
+    "pb": 0.85,
+    "payout_pct": 55
+   }
+  },
+  "KTB": {
+   "name": "Krung Thai Bank",
+   "sector": "Banking",
+   "tier": "B",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    0.75,
+    0.75,
+    0.85,
+    0.9,
+    0.75,
+    0.84,
+    0.95,
+    1.42,
+    1.8,
+    1.84
+   ],
+   "prices": [
+    17.0,
+    21.0,
+    19.5,
+    17.0,
+    11.5,
+    13.0,
+    17.5,
+    19.5,
+    22.0,
+    27.5
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 27.5,
+    "div_yield_pct": 6.7,
+    "fwd_pe": 8.5,
+    "pb": 0.95,
+    "payout_pct": 60
+   }
+  },
+  "TISCO": {
+   "name": "TISCO Financial Group",
+   "sector": "Banking",
+   "tier": "A",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    4.5,
+    5.5,
+    6.5,
+    7.5,
+    4.5,
+    6.3,
+    7.0,
+    7.5,
+    7.75,
+    7.78
+   ],
+   "prices": [
+    50.0,
+    80.0,
+    84.0,
+    100.0,
+    78.0,
+    91.0,
+    98.0,
+    102.0,
+    108.0,
+    114.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 114.0,
+    "div_yield_pct": 6.77,
+    "fwd_pe": 11.2,
+    "pb": 1.95,
+    "payout_pct": 91
+   }
+  },
+  "BBL": {
+   "name": "Bangkok Bank",
+   "sector": "Banking",
+   "tier": "B",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    6.5,
+    6.5,
+    6.5,
+    7.0,
+    2.5,
+    2.5,
+    4.5,
+    7.0,
+    8.5,
+    8.0
+   ],
+   "prices": [
+    160.0,
+    200.0,
+    180.0,
+    168.0,
+    110.0,
+    130.0,
+    145.0,
+    152.0,
+    158.0,
+    150.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 150.0,
+    "div_yield_pct": 5.3,
+    "fwd_pe": 7.5,
+    "pb": 0.55,
+    "payout_pct": 33
+   }
+  },
+  "TCAP": {
+   "name": "Thanachart Capital",
+   "sector": "Holding",
+   "tier": "B",
+   "category": "financial",
+   "ipo_year": null,
+   "div": [
+    2.4,
+    2.6,
+    2.8,
+    3.0,
+    3.0,
+    3.2,
+    3.5,
+    3.8,
+    4.0,
+    4.0
+   ],
+   "prices": [
+    40.0,
+    52.0,
+    50.0,
+    45.0,
+    32.0,
+    42.0,
+    45.0,
+    48.0,
+    51.0,
+    51.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 51.0,
+    "div_yield_pct": 7.85,
+    "fwd_pe": 7.8,
+    "pb": 0.65,
+    "payout_pct": 50
+   }
+  },
+  "TIDLOR": {
+   "name": "Ngern Tid Lor",
+   "sector": "Consumer Finance",
+   "tier": "A",
+   "category": "financial",
+   "ipo_year": 2021,
+   "div": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0.05,
+    0.2,
+    0.24,
+    0.26,
+    0.35
+   ],
+   "prices": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    38.0,
+    21.0,
+    17.5,
+    16.5,
+    19.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 19.0,
+    "div_yield_pct": 1.82,
+    "fwd_pe": 11.0,
+    "pb": 2.2,
+    "payout_pct": 25
+   }
+  },
+  "GULF": {
+   "name": "Gulf Development",
+   "sector": "Energy",
+   "tier": "S",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.55,
+    0.62,
+    0.7,
+    0.85,
+    1.05,
+    3.25
+   ],
+   "prices": [
+    12.5,
+    25.0,
+    28.0,
+    31.0,
+    33.0,
+    42.0,
+    45.0,
+    52.0,
+    49.0,
+    57.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 57.0,
+    "div_yield_pct": 1.84,
+    "fwd_pe": 30.8,
+    "pb": 3.2,
+    "payout_pct": 70
+   }
+  },
+  "CPALL": {
+   "name": "CP All (7-Eleven)",
+   "sector": "Retail",
+   "tier": "S",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.9,
+    1.0,
+    1.1,
+    1.15,
+    0.9,
+    0.65,
+    0.75,
+    0.9,
+    1.2,
+    1.35
+   ],
+   "prices": [
+    55.0,
+    70.0,
+    72.0,
+    79.0,
+    56.0,
+    60.0,
+    64.0,
+    58.0,
+    54.0,
+    47.75
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 47.75,
+    "div_yield_pct": 3.12,
+    "fwd_pe": 22.5,
+    "pb": 3.8,
+    "payout_pct": 45
+   }
+  },
+  "ADVANC": {
+   "name": "Advanced Info Service",
+   "sector": "Telecom",
+   "tier": "S",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    10.08,
+    7.34,
+    7.34,
+    7.34,
+    7.34,
+    8.59,
+    8.34,
+    8.69,
+    13.4,
+    34.3
+   ],
+   "prices": [
+    148.0,
+    192.0,
+    175.0,
+    215.0,
+    178.0,
+    196.0,
+    208.0,
+    230.0,
+    285.0,
+    363.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 363.0,
+    "div_yield_pct": 9.48,
+    "fwd_pe": 20.9,
+    "pb": 7.2,
+    "payout_pct": 95
+   }
+  },
+  "BDMS": {
+   "name": "Bangkok Dusit Medical Services",
+   "sector": "Healthcare",
+   "tier": "A",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.6,
+    0.7,
+    0.6,
+    0.65,
+    0.4,
+    0.45,
+    0.55,
+    0.7,
+    0.8,
+    0.8
+   ],
+   "prices": [
+    22.0,
+    25.0,
+    26.0,
+    24.5,
+    19.0,
+    22.0,
+    28.0,
+    27.0,
+    20.5,
+    19.6
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 19.6,
+    "div_yield_pct": 4.08,
+    "fwd_pe": 25.4,
+    "pb": 3.9,
+    "payout_pct": 100
+   }
+  },
+  "WHAUP": {
+   "name": "WHA Utilities & Power",
+   "sector": "Utility",
+   "tier": "B",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.04,
+    0.06,
+    0.08,
+    0.09,
+    0.1,
+    0.11,
+    0.12,
+    0.13,
+    0.14,
+    0.16
+   ],
+   "prices": [
+    3.0,
+    5.5,
+    6.0,
+    5.2,
+    3.2,
+    3.8,
+    4.2,
+    3.5,
+    3.1,
+    4.94
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 4.94,
+    "div_yield_pct": 3.2,
+    "fwd_pe": 18.6,
+    "pb": 1.4,
+    "payout_pct": 60
+   }
+  },
+  "PTT": {
+   "name": "PTT Public Company",
+   "sector": "Energy",
+   "tier": "B",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    1.0,
+    1.1,
+    1.2,
+    1.4,
+    1.0,
+    1.4,
+    2.0,
+    2.0,
+    2.0,
+    1.9
+   ],
+   "prices": [
+    38.0,
+    50.0,
+    48.0,
+    44.0,
+    35.0,
+    38.0,
+    35.0,
+    33.0,
+    32.0,
+    29.5
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 29.5,
+    "div_yield_pct": 6.0,
+    "fwd_pe": 10.8,
+    "pb": 0.85,
+    "payout_pct": 65
+   }
+  },
+  "PRM": {
+   "name": "Prima Marine",
+   "sector": "Shipping",
+   "tier": "B",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.2,
+    0.25,
+    0.28,
+    0.3,
+    0.3,
+    0.35,
+    0.42,
+    0.5,
+    0.55,
+    0.58
+   ],
+   "prices": [
+    7.0,
+    7.5,
+    7.2,
+    6.5,
+    5.5,
+    6.2,
+    7.0,
+    7.5,
+    8.5,
+    9.45
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 9.45,
+    "div_yield_pct": 6.1,
+    "fwd_pe": 9.5,
+    "pb": 1.85,
+    "payout_pct": 55
+   }
+  },
+  "KTC": {
+   "name": "Krungthai Card",
+   "sector": "Consumer Finance",
+   "tier": "B",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.5,
+    0.7,
+    0.85,
+    0.95,
+    1.0,
+    1.1,
+    1.25,
+    1.5,
+    1.7,
+    1.75
+   ],
+   "prices": [
+    16.0,
+    21.0,
+    35.0,
+    42.0,
+    51.0,
+    64.0,
+    58.0,
+    48.0,
+    52.0,
+    50.25
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 50.25,
+    "div_yield_pct": 3.5,
+    "fwd_pe": 11.5,
+    "pb": 2.85,
+    "payout_pct": 40
+   }
+  },
+  "TTW": {
+   "name": "Thai Tap Water",
+   "sector": "Utility",
+   "tier": "C",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.55,
+    0.55,
+    0.58,
+    0.58,
+    0.6,
+    0.6,
+    0.62,
+    0.62,
+    0.62,
+    0.62
+   ],
+   "prices": [
+    12.5,
+    12.0,
+    13.5,
+    14.0,
+    11.0,
+    10.5,
+    10.0,
+    9.5,
+    9.2,
+    8.85
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 8.85,
+    "div_yield_pct": 6.9,
+    "fwd_pe": 12.5,
+    "pb": 1.8,
+    "payout_pct": 90
+   }
+  },
+  "SIRI": {
+   "name": "Sansiri",
+   "sector": "Property",
+   "tier": "D",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.13,
+    0.13,
+    0.13,
+    0.1,
+    0.1,
+    0.12,
+    0.13,
+    0.15,
+    0.16,
+    0.16
+   ],
+   "prices": [
+    1.95,
+    2.1,
+    1.95,
+    1.6,
+    0.96,
+    1.2,
+    1.45,
+    1.85,
+    1.88,
+    1.65
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 1.65,
+    "div_yield_pct": 9.5,
+    "fwd_pe": 7.5,
+    "pb": 0.75,
+    "payout_pct": 80
+   }
+  },
+  "AP": {
+   "name": "AP Thailand",
+   "sector": "Property",
+   "tier": "D",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.3,
+    0.32,
+    0.4,
+    0.45,
+    0.45,
+    0.55,
+    0.65,
+    0.7,
+    0.7,
+    0.7
+   ],
+   "prices": [
+    6.5,
+    9.0,
+    9.5,
+    7.5,
+    5.5,
+    8.5,
+    9.2,
+    11.0,
+    9.5,
+    7.9
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 7.9,
+    "div_yield_pct": 8.85,
+    "fwd_pe": 6.8,
+    "pb": 0.95,
+    "payout_pct": 60
+   }
+  },
+  "HMPRO": {
+   "name": "Home Product Center",
+   "sector": "Retail",
+   "tier": "D",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.2,
+    0.22,
+    0.28,
+    0.3,
+    0.32,
+    0.34,
+    0.35,
+    0.35,
+    0.32,
+    0.31
+   ],
+   "prices": [
+    9.0,
+    12.0,
+    13.5,
+    16.5,
+    14.0,
+    13.0,
+    11.5,
+    10.0,
+    8.5,
+    6.9
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 6.9,
+    "div_yield_pct": 4.5,
+    "fwd_pe": 14.6,
+    "pb": 3.65,
+    "payout_pct": 75
+   }
+  },
+  "SABINA": {
+   "name": "Sabina",
+   "sector": "Retail",
+   "tier": "C",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.5,
+    0.55,
+    0.62,
+    0.7,
+    0.75,
+    0.85,
+    1.1,
+    1.2,
+    1.3,
+    1.2
+   ],
+   "prices": [
+    20.0,
+    27.0,
+    30.0,
+    27.5,
+    18.5,
+    22.0,
+    28.0,
+    25.0,
+    22.0,
+    18.5
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 18.5,
+    "div_yield_pct": 6.5,
+    "fwd_pe": 14.5,
+    "pb": 2.5,
+    "payout_pct": 85
+   }
+  },
+  "ICHI": {
+   "name": "Ichitan Group",
+   "sector": "F&B",
+   "tier": "C",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.62,
+    0.65,
+    0.65
+   ],
+   "prices": [
+    14.0,
+    13.5,
+    12.0,
+    11.0,
+    9.5,
+    11.5,
+    13.5,
+    14.0,
+    13.0,
+    12.4
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 12.4,
+    "div_yield_pct": 5.2,
+    "fwd_pe": 14.5,
+    "pb": 1.85,
+    "payout_pct": 80
+   }
+  },
+  "SCC": {
+   "name": "Siam Cement Group",
+   "sector": "Petrochemical",
+   "tier": "D",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    16.0,
+    19.0,
+    19.0,
+    14.0,
+    14.0,
+    18.5,
+    8.5,
+    5.5,
+    4.0,
+    3.5
+   ],
+   "prices": [
+    500.0,
+    480.0,
+    440.0,
+    390.0,
+    360.0,
+    410.0,
+    350.0,
+    280.0,
+    220.0,
+    142.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 142.0,
+    "div_yield_pct": 2.5,
+    "fwd_pe": 28.5,
+    "pb": 0.85,
+    "payout_pct": 65
+   }
+  },
+  "RATCH": {
+   "name": "Ratch Group",
+   "sector": "IPP (Power)",
+   "tier": "C",
+   "category": "other",
+   "ipo_year": null,
+   "div": [
+    2.3,
+    2.35,
+    2.4,
+    2.45,
+    2.5,
+    2.55,
+    2.6,
+    2.6,
+    1.55,
+    1.55
+   ],
+   "prices": [
+    55.0,
+    70.0,
+    65.0,
+    75.0,
+    50.0,
+    47.0,
+    40.0,
+    35.0,
+    32.0,
+    28.0
+   ],
+   "seed_current": {
+    "as_of": "2026-05-18",
+    "price": 28.0,
+    "div_yield_pct": 5.5,
+    "fwd_pe": 13.5,
+    "pb": 0.95,
+    "payout_pct": 80
+   }
+  }
+ }
+}
