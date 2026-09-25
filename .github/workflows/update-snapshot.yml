@@ -1,0 +1,53 @@
+# .github/workflows/update-snapshot.yml
+# Daily price + valuation refresh. No API keys, no LLM, no paid quota.
+# SET closes 16:30 ICT → run 17:30 ICT = 10:30 UTC, Mon–Fri.
+name: update-snapshot
+
+on:
+  schedule:
+    - cron: "30 10 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh snapshot.json
+        id: refresh
+        run: |
+          set +e
+          python3 tools/update_snapshot.py 2> guard.log
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          set -e
+          cat guard.log
+          echo "### snapshot guard log" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat guard.log >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      # Commit whatever passed the guards. Git history = a free audit log of
+      # every price the dashboard has ever shown.
+      - name: Commit
+        run: |
+          git config user.name  "almanac-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add snapshot.json
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "snapshot: $(date -u +%Y-%m-%d)"
+          git push
+
+      # Red run = something was rejected/stale/failed. Fix it, do not ignore it.
+      - name: Fail the run if a guard fired
+        if: steps.refresh.outputs.exit != '0'
+        run: |
+          echo "guards fired — see the log above"
+          exit 1
