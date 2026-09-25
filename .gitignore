@@ -1,0 +1,4 @@
+__pycache__/
+*.tmp
+history_diff.md
+history_verified.json

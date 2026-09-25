@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thai Dividend Almanac · Price &amp; Valuation Update · 22 Sep 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-2: #142340;
+  --navy-3: #1a2942;
+  --navy-card: #142340;
+  --gold: #c9a961;
+  --gold-bright: #e6c989;
+  --gold-dark: #8b7340;
+  --teal: #2d8a8a;
+  --teal-bright: #5fc9c9;
+  --purple: #6b4b8a;
+  --red: #c4534a;
+  --green: #4a9d6f;
+  --green-bright: #7bc99a;
+  --yellow: #d4a548;
+  --text: #e8e8e8;
+  --text-dim: #8a9bb8;
+  --text-muted: #5a6a8a;
+  --border: #2a3a5a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Sarabun', -apple-system, sans-serif;
+  background: var(--navy);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(at 20% 0%, rgba(201, 169, 97, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(45, 138, 138, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(107, 75, 138, 0.03) 0px, transparent 70%);
+}
+
+.container { max-width: 1600px; margin: 0 auto; padding: 24px; }
+
+/* HEADER */
+.header {
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.header::before {
+  content: "§ THE ALMANAC · 2026";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--text);
+  margin-top: 30px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+.header h1 .accent {
+  color: var(--gold);
+  font-style: italic;
+}
+.header .subtitle {
+  color: var(--text-dim);
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+.header .meta-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.header .meta-row span { color: var(--gold-bright); }
+
+/* TAB NAVIGATION */
+.tab-nav {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+  background: var(--navy-2);
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.tab-btn {
+  flex: 1;
+  min-width: 140px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.25s;
+}
+.tab-btn:hover { color: var(--gold); }
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy);
+  box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+}
+
+.tab-content { display: none; animation: fadeIn 0.4s; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* INCOME CALCULATOR HERO */
+.calculator-hero {
+  background: linear-gradient(135deg, var(--navy-2), var(--navy-3));
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.calculator-hero::before {
+  content: '💰';
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 120px;
+  opacity: 0.08;
+}
+.calc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.calc-subtitle {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.calc-input-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.calc-input-group label {
+  color: var(--text);
+  font-size: 14px;
+}
+.calc-input {
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  color: var(--gold-bright);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  width: 180px;
+  text-align: center;
+}
+.calc-input:focus { outline: none; border-color: var(--gold-bright); }
+.calc-period-toggle {
+  display: flex;
+  gap: 0;
+  background: var(--navy);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.calc-period-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 12px 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+.calc-period-btn.active { background: var(--gold); color: var(--navy); }
+
+/* INCOME CARD GRID */
+.income-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.income-card {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.income-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.income-card .corner-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 0 12px 0 8px;
+  letter-spacing: 1px;
+}
+.income-card .corner-tag.tier-S { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); }
+.income-card .corner-tag.tier-A { background: var(--green); color: var(--navy); }
+.income-card .corner-tag.tier-B { background: var(--teal); color: var(--navy); }
+.income-card .corner-tag.tier-C { background: var(--yellow); color: var(--navy); }
+.income-card .corner-tag.tier-D { background: var(--red); color: white; }
+.income-card .ticker-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.income-card .ticker {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -0.5px;
+}
+.income-card .price {
+  text-align: right;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.income-card .price .val {
+  display: block;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: monospace;
+}
+.income-card .yield-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.income-card .metric {
+  flex: 1;
+  text-align: center;
+}
+.income-card .metric .lbl {
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.income-card .metric .val {
+  color: var(--green-bright);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: monospace;
+}
+.income-card .metric.purple .val { color: var(--gold-bright); }
+.income-card .metric.red .val { color: #ff9080; }
+.income-card .calc-result {
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), rgba(45, 138, 138, 0.05));
+  border: 1px solid var(--gold-dark);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+}
+.income-card .calc-result .row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.income-card .calc-result .row.highlight {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-bright);
+}
+.income-card .verdict-mini {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* DEEP DIVE SECTION */
+.deep-dive {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  border-left: 4px solid var(--gold);
+}
+.deep-dive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.deep-dive-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -1px;
+}
+.deep-dive-title .company-name {
+  display: block;
+  font-size: 14px;
+  color: var(--text-dim);
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 4px;
+}
+.deep-dive-snapshot {
+  text-align: right;
+  font-size: 12px;
+}
+.deep-dive-snapshot .price-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--text);
+  display: block;
+}
+.deep-dive-snapshot .change-pos { color: var(--green-bright); }
+.deep-dive-snapshot .change-neg { color: #ff9080; }
+
+.dive-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.dive-stat {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+.dive-stat .lbl {
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.dive-stat .val {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold-bright);
+  margin-top: 4px;
+}
+.dive-stat.green .val { color: var(--green-bright); }
+.dive-stat.red .val { color: #ff9080; }
+.dive-stat.gold .val { color: var(--gold); }
+
+.dive-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.dive-chart {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.dive-chart h4 {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.dive-chart .chart-wrap { height: 220px; position: relative; }
+
+.dive-verdict {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.verdict-card {
+  background: var(--navy);
+  border-radius: 8px;
+  padding: 18px;
+  border-left: 3px solid var(--gold);
+}
+.verdict-card.green { border-left-color: var(--green); }
+.verdict-card.red { border-left-color: var(--red); }
+.verdict-card h5 {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.verdict-card.green h5 { color: var(--green-bright); }
+.verdict-card.red h5 { color: #ff9080; }
+.verdict-card p {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.final-verdict {
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(45, 138, 138, 0.08));
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.final-verdict h5 {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.final-verdict .verdict-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.final-verdict .return-summary {
+  text-align: center;
+  padding: 16px;
+  background: var(--navy);
+  border-radius: 8px;
+}
+.final-verdict .return-summary .lbl {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.final-verdict .return-summary .val {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--gold-bright);
+  display: block;
+  margin: 8px 0;
+}
+.final-verdict .return-summary.green .val { color: var(--green-bright); }
+.final-verdict .return-summary.red .val { color: #ff9080; }
+.final-verdict .return-summary .annual {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* TIER SUMMARY TABLE */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+.tier-column {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.tier-column.S { border-top: 4px solid var(--gold); }
+.tier-column.A { border-top: 4px solid var(--green); }
+.tier-column.B { border-top: 4px solid var(--teal); }
+.tier-column.C { border-top: 4px solid var(--yellow); }
+.tier-column.D { border-top: 4px solid var(--red); }
+.tier-column h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tier-column.S h3 { color: var(--gold); }
+.tier-column.A h3 { color: var(--green-bright); }
+.tier-column.B h3 { color: var(--teal-bright); }
+.tier-column.C h3 { color: var(--yellow); }
+.tier-column.D h3 { color: #ff9080; }
+.tier-column h3 .count {
+  font-size: 11px;
+  background: var(--navy);
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+.tier-stock-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  align-items: center;
+}
+.tier-stock-row:last-child { border-bottom: none; }
+.tier-stock-row .tk {
+  font-weight: 800;
+  color: var(--gold-bright);
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
+.tier-stock-row .name {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+.tier-stock-row .stat {
+  color: var(--green-bright);
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+}
+.tier-stock-row .stat .small {
+  display: block;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+/* COMPARISON TABLE */
+.comparison-table {
+  background: var(--navy-2);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.comp-header {
+  background: linear-gradient(135deg, var(--navy-3), var(--navy-2));
+  padding: 20px 24px;
+  border-bottom: 2px solid var(--gold);
+}
+.comp-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--gold);
+}
+.comp-header p {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 4px;
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+.comp-table thead {
+  background: var(--navy-3);
+}
+.comp-table thead th {
+  padding: 14px 12px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid var(--gold-dark);
+  white-space: nowrap;
+}
+.comp-table thead th.left { text-align: left; }
+.comp-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  text-align: center;
+  font-family: monospace;
+}
+.comp-table tbody td.left { text-align: left; font-family: 'Sarabun', sans-serif; }
+.comp-table tbody td .ticker {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--gold);
+}
+.comp-table tbody td .name {
+  display: block;
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.comp-table tbody tr:hover { background: rgba(201, 169, 97, 0.05); }
+.comp-pos { color: var(--green-bright); }
+.comp-neg { color: #ff9080; }
+
+/* CALL TO ACTION */
+.callout {
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), rgba(45, 138, 138, 0.05));
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.callout h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.callout p {
+  color: var(--text-dim);
+  font-size: 14px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--text-muted);
+  font-size: 11px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+.footer .disclaimer {
+  color: #ff9080;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .header h1 { font-size: 32px; }
+  .dive-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .dive-charts { grid-template-columns: 1fr; }
+  .dive-verdict { grid-template-columns: 1fr; }
+  .final-verdict { grid-template-columns: 1fr; }
+}
+
+/* ===== UPDATE 22/09/2026 ADDITIONS ===== */
+.chip { display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.3px; padding:1px 7px; border-radius:10px; vertical-align:middle; margin-left:4px; line-height:16px; }
+.chip.ok { background:rgba(74,157,111,.18); color:var(--green-bright); border:1px solid rgba(123,201,154,.35); }
+.chip.der { background:rgba(45,138,138,.18); color:var(--teal-bright); border:1px solid rgba(95,201,201,.35); }
+.chip.seed { background:rgba(196,83,74,.16); color:#ff9080; border:1px solid rgba(255,144,128,.35); }
+.chip.warn { background:rgba(212,165,72,.16); color:var(--yellow); border:1px solid rgba(212,165,72,.4); }
+.asof { font-size:10px; color:var(--text-muted); display:block; margin-top:2px; }
+.banner { background:rgba(196,83,74,.07); border:1px solid rgba(196,83,74,.35); border-left:4px solid var(--red); border-radius:10px; padding:14px 18px; margin-bottom:24px; font-size:13px; color:var(--text); line-height:1.7; }
+.banner b { color:var(--gold-bright); }
+.banner .legend { margin-top:6px; color:var(--text-dim); font-size:12px; }
+.feed-status { font-size:12px; color:var(--text-muted); }
+.feed-status b { color:var(--gold-bright); font-weight:600; }
+.mode-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:-8px; margin-bottom:18px; font-size:13px; color:var(--text-dim); }
+.frozen-note { font-size:11px; color:var(--text-muted); margin:-4px 0 12px; font-style:italic; }
+.audit-flag { font-size:11px; line-height:1.5; text-align:left !important; font-family:'Sarabun',sans-serif !important; color:var(--text-dim); min-width:220px; }
+.audit-flag.bad { color:#ff9080; }
+.audit-flag.mid { color:var(--yellow); }
+.prose-block { background:var(--navy-2); border:1px solid var(--border); border-radius:12px; padding:22px 26px; margin-bottom:24px; font-size:14px; line-height:1.8; max-width:980px; }
+.prose-block h3 { font-family:'Playfair Display',serif; color:var(--gold); font-size:20px; margin-bottom:8px; }
+.prose-block p + p { margin-top:10px; }
+.na { color:var(--text-muted); }
+@media (max-width: 768px) { .banner { font-size:12px; } .prose-block { padding:16px; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>The Thai <span class="accent">Dividend</span> Almanac</h1>
+    <div class="subtitle">Dossier II · Price &amp; Valuation Update · รอบ 22 ก.ย. 2569</div>
+    <div class="meta-row">
+      <div id="asofLine">📅 อัปเดต <span>22 ก.ย. 69</span> · ราคาปิดล่าสุด 17 – 21 ก.ย. 69 (ดูวันที่รายตัว)</div>
+      <div id="mktLine">📊 SET <span>1,598.03</span> ปิด 21 ก.ย. 69 · ภาคเช้า 22 ก.ย. 69 <span>1,609.37</span></div>
+      <div>🏛 BoT Rate <span>1.00%</span> (ลด ก.พ. 69) · Fitch ปรับ Outlook ไทยเป็น <span>Stable</span></div>
+      <div>💎 Coverage: <span>24 stocks</span> · Tier S–D</div>
+    </div>
+    <div class="meta-row"><div class="feed-status" id="feedStatus">กำลังตรวจแหล่งข้อมูล…</div></div>
+  </div>
+
+  <div class="banner">
+    <b>อ่านก่อนใช้:</b> ราคา / P/E / P/BV / Yield รอบนี้ verify จากแหล่งจริงแล้ว — แต่ <b>ประวัติปันผล-ราคา 2016–2025 ยังเป็นชุด SEED</b> จาก dossier เดิม (ยังไม่ verify) ดังนั้น Yield เฉลี่ย 10 ปี, Div CAGR และ 10Y Total Return ทุกตัวใช้เปรียบเทียบเชิงทิศทางเท่านั้น ไม่ใช่ตัวเลขตัดสินใจ ราคา seed ของ 18 พ.ค. หลายตัวห่างจากราคาจริงเกินกว่าที่ตลาดขยับได้ (ดูแท็บ 🔄 Update 22/09)
+    <div class="legend"><span class="chip ok">VERIFIED</span> ดึงตรงจากแหล่ง · <span class="chip der">DERIVED</span> คำนวณจากตัวเลขที่ verify แล้ว · <span class="chip seed">SEED</span> ข้อมูลจำลองเดิม ยังไม่ verify</div>
+  </div>
+
+  <!-- TAB NAVIGATION -->
+  <div class="tab-nav">
+    <button class="tab-btn active" data-tab="calc">💰 ปันผล/เดือน</button>
+    <button class="tab-btn" data-tab="financial">🏦 Financial Stocks Deep Dive</button>
+    <button class="tab-btn" data-tab="comparison">📊 10-Year Comparison</button>
+    <button class="tab-btn" data-tab="tier">⭐ Tier S–D Summary</button>
+    <button class="tab-btn" data-tab="audit">🔄 Update 22/09</button>
+  </div>
+
+  <!-- TAB 1: INCOME CALCULATOR -->
+  <div class="tab-content active" id="tab-calc">
+    <div class="calculator-hero">
+      <div class="calc-title">อยากได้เงินปันผล <span style="color: var(--gold-bright)">X บาท/เดือน</span> ต้องใช้เงินเท่าไหร่?</div>
+      <div class="calc-subtitle" id="calcSubtitle"></div>
+      <div class="calc-input-group">
+        <label>ต้องการเงินปันผล:</label>
+        <input type="number" class="calc-input" id="targetIncome" value="1000" min="100" step="100">
+        <div class="calc-period-toggle">
+          <button class="calc-period-btn active" data-period="month">บาท/เดือน</button>
+          <button class="calc-period-btn" data-period="year">บาท/ปี</button>
+        </div>
+      </div>
+      <div class="mode-row">
+        <span>คำนวณจาก:</span>
+        <div class="calc-period-toggle">
+          <button class="calc-period-btn yield-mode active" data-mode="ttm">Yield TTM (verified)</button>
+          <button class="calc-period-btn yield-mode" data-mode="avg">Yield เฉลี่ย 10 ปี (SEED)</button>
+        </div>
+      </div>
+      <div style="font-size: 13px; color: var(--text-dim);">
+        💡 <strong>หมายเหตุ:</strong> จำนวนหุ้นปัดขึ้นเป็น 100 หุ้น (1 board lot) · ยังไม่หักภาษีหัก ณ ที่จ่าย 10% · Yield TTM คือปันผลที่จ่ายจริงย้อนหลัง 12 เดือน ไม่ใช่การันตีปันผลปีหน้า · ADVANC ใช้ yield ที่ตัดปันผลพิเศษออก
+      </div>
+    </div>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); margin-bottom: 20px;" id="finHeading">🏦 หุ้นกลุ่มการเงิน</h2>
+    <div class="income-grid" id="financialCards"></div>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); margin-bottom: 20px; margin-top: 40px;">💎 หุ้นอื่นๆ ใน Watchlist (Tier S–D)</h2>
+    <div class="income-grid" id="otherCards"></div>
+  </div>
+
+  <!-- TAB 2: FINANCIAL DEEP DIVE -->
+  <div class="tab-content" id="tab-financial">
+    <div class="callout">
+      <h2>🏦 Financial Stocks Deep Dive · Valuation ณ 22 ก.ย. 2569</h2>
+      <p>หุ้นกลุ่มการเงิน 8 ตัว · ราคา/P/E/P/BV/Yield อัปเดตรอบนี้ · กราฟปันผลและราคา 2016–2025 เป็นชุด SEED + จุด “ล่าสุด” คือราคาที่ verify แล้ว</p>
+    </div>
+    <div id="deepDiveContainer"></div>
+  </div>
+
+  <!-- TAB 3: 10-YEAR COMPARISON -->
+  <div class="tab-content" id="tab-comparison">
+    <div class="callout">
+      <h2>📊 10-Year Dividend &amp; Price Comparison</h2>
+      <p>ปลายทางของผลตอบแทนใช้ราคาล่าสุดที่ verify แล้ว · จุดเริ่มต้นและปันผลสะสมยังเป็น SEED · หุ้นที่ IPO หลัง 2016 คำนวณ “ตั้งแต่ IPO”</p>
+    </div>
+    <div class="comparison-table">
+      <div class="comp-header">
+        <h3>Annual Dividend Per Share (DPS in THB) · 2016–2025 <span class="chip seed">SEED</span></h3>
+        <p>ประวัติปันผลทั้ง decade จาก dossier เดิม · ยังไม่ได้เทียบกับประกาศ XD จริงของ SET</p>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th class="left">Ticker</th>
+              <th>'16</th><th>'17</th><th>'18</th><th>'19</th><th>'20</th>
+              <th>'21</th><th>'22</th><th>'23</th><th>'24</th><th>'25</th>
+              <th>Total</th>
+              <th>Div CAGR</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody id="divComparisonBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="comparison-table">
+      <div class="comp-header">
+        <h3>Price Performance · ราคาเริ่มต้น vs ราคาล่าสุด · Total Return</h3>
+        <p>ราคาเริ่มต้น (SEED) · ราคาล่าสุด (VERIFIED) · Total Return = Capital + ปันผลสะสม</p>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th class="left">Ticker</th>
+              <th>ราคาเริ่ม</th>
+              <th>ราคาล่าสุด</th>
+              <th>Price Change %</th>
+              <th>ปันผลสะสม</th>
+              <th>Div Return %</th>
+              <th>Total Return %</th>
+              <th>CAGR</th>
+              <th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody id="priceComparisonBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: TIER SUMMARY -->
+  <div class="tab-content" id="tab-tier">
+    <div class="callout">
+      <h2>⭐ Tier Classification · All Coverage</h2>
+      <p>Tier เป็นมุมมองเชิงคุณภาพ ณ 18 พ.ค. 2569 (ยังไม่ re-tier รอบนี้) · ตัวเลข Yield/P/E เป็นค่า TTM ล่าสุด · 10Y Total ใช้ history ชุด SEED</p>
+    </div>
+    <div class="tier-grid" id="tierGrid"></div>
+  </div>
+
+  <!-- TAB 5: AUDIT -->
+  <div class="tab-content" id="tab-audit">
+    <div class="callout">
+      <h2>🔄 Price &amp; Valuation Update · 22 ก.ย. 2569</h2>
+      <p>ตาราง live snapshot (ชั้นที่ script รายวันจะเขียนทับ) · เทียบกับราคา seed 18 พ.ค. เพื่อจับ seed ที่ผิด (drift detector)</p>
+    </div>
+    <div class="comparison-table">
+      <div class="comp-header">
+        <h3>Live Snapshot · 24 หุ้น</h3>
+        <p>Payout = Yield TTM × P/E TTM (implied) · Drift = ราคาล่าสุดเทียบราคา seed 18 พ.ค. · ⚠ เมื่อ |drift| &gt; 25% หรือมีข้อสังเกตเฉพาะตัว</p>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th class="left">Ticker</th>
+              <th>Tier</th>
+              <th>ราคาล่าสุด</th>
+              <th>ณ วันที่</th>
+              <th>แหล่ง</th>
+              <th>P/E TTM</th>
+              <th>P/BV</th>
+              <th>Yield TTM</th>
+              <th>Payout</th>
+              <th>Seed 18 พ.ค.</th>
+              <th>Drift</th>
+              <th class="left">ข้อสังเกต</th>
+            </tr>
+          </thead>
+          <tbody id="auditBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="prose-block">
+      <h3>สิ่งที่เปลี่ยนใน engine รอบนี้</h3>
+      <p>ผลตอบแทนทุกตัวเปลี่ยนมาใช้ราคาล่าสุดเป็นปลายทางตาม convention ใน §1 ของ data export (ไฟล์เดิมใช้ราคาปี 2025 ใน history ทำให้หน้าเว็บกับไฟล์ข้อมูลให้ตัวเลขไม่ตรงกัน เช่น KKP) หุ้นที่ IPO หลัง 2016 อย่าง TIDLOR คำนวณตั้งแต่ปีแรกที่มีราคา แทนที่จะออกมาเป็น 0% แบบเดิม Yield เฉลี่ย 10 ปีคำนวณจาก history จริงตามสูตรใน §2 แทนค่าที่พิมพ์มือไว้ ราคาปิดปี 2025 ของ CPALL แก้เป็น 43.50 บาท (ราคาปิด 30 ธ.ค. 2568 จาก AiO) และป้าย “Fwd P/E” เปลี่ยนเป็น “P/E TTM” เพราะตัวเลขที่ verify ได้รอบนี้เป็นกำไรย้อนหลัง 12 เดือน</p>
+      <p>ชั้นข้อมูลสดถูกแยกออกมาเป็น <code>SNAPSHOT</code> ก้อนเดียวในไฟล์ และหน้าเว็บจะพยายามโหลด <code>snapshot.json</code> จากโฟลเดอร์เดียวกันก่อนทุกครั้ง ถ้าไม่มีไฟล์ก็ใช้ค่าที่ฝังไว้ ผู้เข้าชมจึงไม่ต้องใส่ key อะไรเลย ส่วนการเติม snapshot.json รายวันให้ทำฝั่ง server (cron) แล้วเขียนไฟล์ทับ</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>🏛 Generated for <strong style="color: var(--gold)">EarthDeFIRE</strong> · Powered by Claude · Last Updated: 22 ก.ย. 2569 (price &amp; valuation) · Narrative/tier: 18 พ.ค. 2569</div>
+    <div>📊 Live layer: AiO by Panphol (aio.panphol.com) — ราคา, P/E, P/BV, Yield · TradingView Thailand market movers — EPS/DPS TTM และราคาปิดที่คำนวณย้อน · Kaohoon / ฐานเศรษฐกิจ — SET Index</div>
+    <div>📚 History layer (SEED): Dossier II data export — ยังไม่ verify กับ SET SMART / company IR</div>
+    <div class="disclaimer">⚠️ For educational and informational purposes only. Not investment advice. Past performance does not guarantee future results. DYOR.</div>
+  </div>
+
+</div>
+
+<script>
+// =====================================================================
+// LIVE LAYER — SNAPSHOT (daily-update target)
+// A server-side job can write the same shape to ./snapshot.json;
+// the page loads it automatically (same origin, no API key for viewers).
+// note = warning shown on cards · info = audit-only remark
+// src: AiO = aio.panphol.com page value (VERIFIED)
+//      TV  = TradingView EPS/DPS TTM + close back-calculated from %chg (DERIVED)
+// =====================================================================
+const SNAPSHOT_EMBEDDED = {
+  generated: '2026-09-22',
+  market: { set_close: 1598.03, set_close_date: '2026-09-21', set_midday: 1609.37, set_midday_date: '2026-09-22', bot_rate: 1.00 },
+  stocks: {
+    SCB:    { price: 156.50, asOf: '2026-09-21', src: 'AiO', pe: 12.11, pb: 1.09, yld: 7.21 },
+    KBANK:  { price: 258.00, asOf: '2026-09-21', src: 'AiO', pe: 11.85, pb: 1.05, yld: 5.43,
+              note: 'seed 154 ต่ำกว่า 52W low 163 → ราคา seed ผิดแน่นอน' },
+    KKP:    { price: 118.00, asOf: '2026-09-18', src: 'AiO', pe: 13.50, pb: 1.47, yld: 4.58 },
+    KTB:    { price: 45.50,  asOf: '2026-09-21', src: 'AiO', pe: 12.73, pb: 1.40, yld: 4.58,
+              info: 'yield คำนวณจาก DPS TTM 2.08 (TradingView)' },
+    TISCO:  { price: 125.00, asOf: '2026-09-17', src: 'TV',  pe: 14.57, pb: null, yld: 6.22 },
+    BBL:    { price: 195.50, asOf: '2026-09-21', src: 'TV',  pe: 8.88,  pb: 0.64, yld: 5.20,
+              info: 'P/BV ใช้ BV 303.61 จาก AiO' },
+    TCAP:   { price: 83.00,  asOf: '2026-09-17', src: 'TV',  pe: 9.96,  pb: null, yld: 4.22 },
+    TIDLOR: { price: 18.10,  asOf: '2026-09-17', src: 'TV',  pe: 9.38,  pb: null, yld: 5.76,
+              note: 'yield TTM 5.8% ขัดกับ seed 1.8% — ตรวจว่ารวมปันผลหุ้น/พิเศษหรือไม่' },
+    GULF:   { price: 61.00,  asOf: '2026-09-17', src: 'TV',  pe: 24.21, pb: null, yld: 1.72 },
+    CPALL:  { price: 44.75,  asOf: '2026-09-21', src: 'AiO', pe: 13.08, pb: 2.69, yld: 3.69 },
+    ADVANC: { price: 346.00, asOf: '2026-09-21', src: 'AiO', pe: 19.22, pb: 19.69, yld: 9.91, yldCalc: 4.83,
+              note: 'Yield TTM 9.9% รวมปันผลพิเศษ · เครื่องคิดใช้ 4.83% (TradingView, ตัด special)' },
+    BDMS:   { price: 19.90,  asOf: '2026-09-21', src: 'TV',  pe: 20.73, pb: null, yld: 3.79 },
+    WHAUP:  { price: 7.15,   asOf: '2026-09-17', src: 'TV',  pe: 18.33, pb: null, yld: 3.56 },
+    PTT:    { price: 42.50,  asOf: '2026-09-17', src: 'TV',  pe: 9.79,  pb: null, yld: 4.97 },
+    PRM:    { price: 9.80,   asOf: '2026-09-17', src: 'TV',  pe: 10.43, pb: null, yld: 5.05 },
+    KTC:    { price: 37.00,  asOf: '2026-09-17', src: 'TV',  pe: 11.31, pb: null, yld: 4.88 },
+    TTW:    { price: 10.10,  asOf: '2026-09-17', src: 'TV',  pe: 12.95, pb: null, yld: 6.00 },
+    SIRI:   { price: 1.46,   asOf: '2026-09-17', src: 'TV',  pe: 5.84,  pb: null, yld: 8.91 },
+    AP:     { price: 7.95,   asOf: '2026-09-21', src: 'AiO', pe: 5.67,  pb: 0.54, yld: 6.54 },
+    HMPRO:  { price: 6.15,   asOf: '2026-09-17', src: 'TV',  pe: 13.37, pb: null, yld: 6.28 },
+    SABINA: { price: 15.50,  asOf: '2026-09-21', src: 'AiO', pe: 13.11, pb: 2.95, yld: null,
+              note: 'ไม่มี yield ที่ verify ได้รอบนี้ — เครื่องคิดโหมด TTM ข้ามตัวนี้' },
+    ICHI:   { price: 13.80,  asOf: '2026-09-18', src: 'AiO', pe: 14.12, pb: 3.25, yld: 7.97,
+              note: 'payout implied >100% — ปันผลเกินกำไร TTM' },
+    SCC:    { price: 264.00, asOf: '2026-09-17', src: 'TV',  pe: 23.66, pb: null, yld: 2.23 },
+    RATCH:  { price: 38.00,  asOf: '2026-09-17', src: 'TV',  pe: 14.84, pb: null, yld: 4.27 }
+  }
+};
+
+// Verified corrections to the static-history layer (index 9 = 2025 year-end)
+const HISTORY_FIXES = {
+  CPALL: [{ field: 'prices', idx: 9, value: 43.50, note: 'ราคาปิด 30 ธ.ค. 2568 = 43.50 (AiO) — seed เดิม 47.75' }]
+};
+
+// =====================================================================
+// STATIC LAYER — SEED dataset from Dossier II (unchanged, May 2026)
+// price/divYieldCurrent/fwdPE/pb/payout/avgYield10Y below are the OLD seed
+// values; they are kept only for the drift audit and are overridden at runtime.
+// =====================================================================
+
+const stocks = [
+  // ===== FINANCIAL STOCKS (DEEP DIVE) =====
+  {
+    ticker: 'SCB', name: 'SCB X Holdings', sector: 'Banking', tier: 'A', isFinancial: true,
+    price: 131.50, divYieldCurrent: 8.58, fwdPE: 9.3, pb: 0.85, payout: 80,
+    div: [5.50, 5.50, 5.50, 5.50, 4.00, 4.06, 6.69, 10.34, 10.44, 11.28],
+    prices: [150.00, 168.00, 138.00, 122.00, 88.00, 116.00, 105.00, 96.00, 116.00, 131.50],
+    avgYield10Y: 6.20, // Manual computed
+    verdict5Y: 'good', verdict10Y: 'okay',
+    summary: 'หลัง spin-off จาก SCBB → SCBX ปี 2021 ปรับเป็น holding company · เน้นปันผลสูง 80% payout · COVID 2020 ตัดเงินปันผลแต่กลับมาแข็งแกร่งหลัง 2022 · Yield 10Y เฉลี่ย 6.2% · ราคาผันผวน',
+    bull: 'Payout 80% สูงสุดในกลุ่มแบงค์ใหญ่ · Wealth/digital pivot · ปันผลโตจาก 5.50 → 11.28 (CAGR 7.4%)',
+    bear: 'NIM compression จาก BoT rate cut 1% · Credit quality ลดลง · Morningstar Fair Value 537 มี optimistic เกินไป',
+    finalVerdict: 'คุ้มในแง่ปันผลแต่ราคาไม่โต · ดีสำหรับ income investor · Bad สำหรับ capital appreciation'
+  },
+  {
+    ticker: 'KBANK', name: 'Kasikornbank', sector: 'Banking', tier: 'A', isFinancial: true,
+    price: 154.00, divYieldCurrent: 6.17, fwdPE: 6.8, pb: 0.65, payout: 41,
+    div: [4.00, 4.00, 4.00, 5.00, 2.50, 3.25, 3.25, 5.00, 12.50, 9.50],
+    prices: [180.00, 220.00, 188.00, 152.00, 110.00, 138.00, 125.00, 132.00, 153.00, 154.00],
+    avgYield10Y: 3.40,
+    verdict5Y: 'good', verdict10Y: 'poor',
+    summary: 'แบงค์ใหญ่อันดับ 2 ไทย · 5Y CAGR div +13.56% (Investing.com) · 2024 special dividend 12.50 THB เป็น highlight · Payout ratio ต่ำ 41% = มี room ขยายอนาคต · ยังเสีย ground เทียบ SCB ในปันผล',
+    bull: 'Payout ต่ำ 41% มี room เพิ่ม · GULF เพิ่งซื้อหุ้น = take-over speculation · Worst case yield BLS 6%',
+    bear: 'Domestic SME exposure · 10Y CAGR ราคา -1.6%/ปี · Provisioning ยังไม่ normalize',
+    finalVerdict: '10 ปีย้อนหลังแย่กว่าคาด · ราคาตก · ปันผลโตช้ามา 5 ปีหลัง · พอใช้ได้แต่ TISCO เหนือกว่า'
+  },
+  {
+    ticker: 'KKP', name: 'Kiatnakin Phatra', sector: 'Banking', tier: 'C', isFinancial: true,
+    price: 81.75, divYieldCurrent: 5.14, fwdPE: 10.2, pb: 0.85, payout: 55,
+    div: [4.00, 6.00, 5.00, 4.50, 2.75, 3.00, 3.95, 2.75, 3.00, 4.25],
+    prices: [62.50, 69.50, 72.00, 66.50, 46.00, 41.50, 73.75, 50.25, 52.50, 68.00],
+    avgYield10Y: 6.35,
+    verdict5Y: 'okay', verdict10Y: 'good',
+    summary: '⚡ อ้างอิงตรงจาก infographic ที่ส่งมา · Average yield 10Y 6.35% · Price 2016 = 62.50 → 2026 YTD = 81.75 = +30.8% · เพื่อปันผล 1,000/เดือน ต้องใช้เงิน ~189,000 บาท หรือ 2,313 หุ้น',
+    bull: 'Wealth/Phatra brokerage แข็งแกร่ง · ราคา 10 ปีโต 30%+ · Yield 6.35% เฉลี่ย ดี',
+    bear: 'Auto loan exposure ปัญหา · Dividend ไม่โต (4.00 → 4.25 ใน 10 ปี) · Competing กับ SCB Wealth, KBank PB',
+    finalVerdict: '10Y total return ~93% (+6.8%/ปี) · พอใช้ได้สำหรับ income · แต่ growth limited · ดีกว่า KBANK ในระยะ 10 ปี'
+  },
+  {
+    ticker: 'KTB', name: 'Krung Thai Bank', sector: 'Banking', tier: 'B', isFinancial: true,
+    price: 27.50, divYieldCurrent: 6.70, fwdPE: 8.5, pb: 0.95, payout: 60,
+    div: [0.75, 0.75, 0.85, 0.90, 0.75, 0.84, 0.95, 1.42, 1.80, 1.84],
+    prices: [17.00, 21.00, 19.50, 17.00, 11.50, 13.00, 17.50, 19.50, 22.00, 27.50],
+    avgYield10Y: 5.20,
+    verdict5Y: 'excellent', verdict10Y: 'excellent',
+    summary: 'แบงค์ภาครัฐ · ปันผลโตจาก 0.75 → 1.84 (CAGR 9.4%) · ราคาขึ้นจาก 17 → 27.50 (+61.7%) · Total 10Y return +125% หรือ +8.5%/ปี · ดีที่สุดในกลุ่มแบงค์ในช่วง 5 ปีหลัง',
+    bull: 'Government loan portfolio + นโยบายรัฐ · Worst-case yield 6.4% (BLS) · Strong growth 5Y',
+    bear: 'การเมือง captured · Debt moratorium risk · Low-yield pension loans',
+    finalVerdict: '⭐ Top performer ในกลุ่มแบงค์ 10 ปี · ปันผลขึ้น price ขึ้น · Total return +125% · คุ้มมาก'
+  },
+  {
+    ticker: 'TISCO', name: 'TISCO Financial Group', sector: 'Banking', tier: 'A', isFinancial: true,
+    price: 114.00, divYieldCurrent: 6.77, fwdPE: 11.2, pb: 1.95, payout: 91,
+    div: [4.50, 5.50, 6.50, 7.50, 4.50, 6.30, 7.00, 7.50, 7.75, 7.78],
+    prices: [50.00, 80.00, 84.00, 100.00, 78.00, 91.00, 98.00, 102.00, 108.00, 114.00],
+    avgYield10Y: 7.10,
+    verdict5Y: 'excellent', verdict10Y: 'excellent',
+    summary: '⭐ ขวัญใจสายปันผลจริง · ปันผลโตจาก 4.50 → 7.78 (CAGR 5.6%) · ราคาขึ้นจาก 50 → 114 (+128%) · Total 10Y return +258% หรือ +13.6%/ปี · เก่งที่สุดในลิสต์',
+    bull: 'NPL ต่ำสุดในกลุ่ม · Auto title loan secured · Wealth management fees · Yield 6.77%',
+    bear: 'Size limitation ขยายไม่ได้แบบ SCB/KBANK · Payout 91% = no growth left · Premium valuation',
+    finalVerdict: '🏆 อันดับ 1 ของหุ้นการเงินในแง่ total return · ทั้งราคาและปันผลขึ้น · คุ้มสุดในกลุ่ม'
+  },
+  {
+    ticker: 'BBL', name: 'Bangkok Bank', sector: 'Banking', tier: 'B', isFinancial: true,
+    price: 150.00, divYieldCurrent: 5.30, fwdPE: 7.5, pb: 0.55, payout: 33,
+    div: [6.50, 6.50, 6.50, 7.00, 2.50, 2.50, 4.50, 7.00, 8.50, 8.00],
+    prices: [160.00, 200.00, 180.00, 168.00, 110.00, 130.00, 145.00, 152.00, 158.00, 150.00],
+    avgYield10Y: 3.80,
+    verdict5Y: 'okay', verdict10Y: 'okay',
+    summary: '🏛 แบงค์เก่าแก่สุดในไทย · Conservative มาก · COVID ตัด div 60% (7→2.5) · กลับมาแข็งแรง 2024 · ราคา 10 ปีตก -6% · Payout ratio ต่ำ 33% = หุ้นปลอดภัยที่สุด',
+    bull: 'P/BV 0.55x ถูกสุดในกลุ่ม · Payout 33% room เพิ่มได้เยอะ · Strong capital adequacy',
+    bear: 'Growth ช้ามาก · เก่าและ conservative · Permata Indonesia ภาระ · ราคาตก 10 ปี',
+    finalVerdict: 'หุ้นปลอดภัย แต่ growth จำกัด · 10Y return +31% (3%/ปี) · เหมาะสำหรับ defensive portfolio เท่านั้น'
+  },
+  {
+    ticker: 'TCAP', name: 'Thanachart Capital', sector: 'Holding', tier: 'B', isFinancial: true,
+    price: 51.00, divYieldCurrent: 7.85, fwdPE: 7.8, pb: 0.65, payout: 50,
+    div: [2.40, 2.60, 2.80, 3.00, 3.00, 3.20, 3.50, 3.80, 4.00, 4.00],
+    prices: [40.00, 52.00, 50.00, 45.00, 32.00, 42.00, 45.00, 48.00, 51.00, 51.00],
+    avgYield10Y: 7.00,
+    verdict5Y: 'good', verdict10Y: 'good',
+    summary: 'Holding ของกลุ่ม Thanachart · ปันผลโต stable +5.2% CAGR · 10Y total return +108% (8.1%/ปี) · Discount to NAV ทำให้ valuation น่าสนใจ · Yield 7.85% สูงสุดในกลุ่ม',
+    bull: 'Discount to NAV ใหญ่ · ปันผลโตทุกปี · Yield 7.85% · TMB stake monetization potential',
+    bear: 'Holding co. discount stuck · ไม่มี catalyst · Retail concentration · Economic cycle exposure',
+    finalVerdict: 'หุ้นปันผลที่ผ่านบทเรียน decade ได้ดี · ราคาไม่หวือหวาแต่ปันผลโต · คุ้มสำหรับ slow & steady'
+  },
+  {
+    ticker: 'TIDLOR', name: 'Ngern Tid Lor (NEW)', sector: 'Consumer Finance', tier: 'A', isFinancial: true,
+    price: 19.00, divYieldCurrent: 1.82, fwdPE: 11.0, pb: 2.2, payout: 25,
+    div: [0, 0, 0, 0, 0, 0.05, 0.20, 0.24, 0.26, 0.35],
+    prices: [0, 0, 0, 0, 0, 38.00, 21.00, 17.50, 16.50, 19.00],
+    avgYield10Y: 1.10,
+    verdict5Y: 'okay', verdict10Y: 'n/a',
+    summary: '⚠️ IPO เม.ย. 2021 (ไม่มีข้อมูล 10 ปี) · Auto title loan secured ผู้นำ · ปันผลน้อย (1.8%) เพราะเน้น growth · ราคา IPO 38 → 19 ตก 50% · 15 BUY rating, TP 23.39 · ⭐ แนะนำเพิ่มเติม',
+    bull: 'Secured collateral · 5Y dividend CAGR +110% · 1,484 สาขา · UBS upgraded · Strong fundamentals',
+    bear: 'Payout ต่ำ 25% · Dividend yield ต่ำ 1.8% · ราคา IPO crashed · Not pure dividend play',
+    finalVerdict: '⚡ Growth + dividend hybrid · ไม่ใช่ pure dividend stock · เหมาะถือยาว 5-10 ปี รอ rerating'
+  },
+
+  // ===== OTHER STOCKS (NON-FINANCIAL) =====
+  {
+    ticker: 'GULF', name: 'Gulf Development', sector: 'Energy', tier: 'S', isFinancial: false,
+    price: 57.00, divYieldCurrent: 1.84, fwdPE: 30.8, pb: 3.2, payout: 70,
+    div: [0.30, 0.35, 0.40, 0.45, 0.55, 0.62, 0.70, 0.85, 1.05, 3.25],
+    prices: [12.50, 25.00, 28.00, 31.00, 33.00, 42.00, 45.00, 52.00, 49.00, 57.00],
+    avgYield10Y: 1.50,
+    verdict5Y: 'excellent', verdict10Y: 'excellent',
+    summary: '⚡ Growth + dividend hybrid · ราคา 10 ปี +356% · ปันผลโต stunning จาก 0.30 → 3.25 (CAGR 26.9%) · ADVANC stake 41% · Data center play · Total 10Y return >400%',
+    bull: 'AI/DC theme · ADVANC payout boost · 354MW solar COD · 10Y CAGR ราคา 16.4%',
+    bear: 'High debt 5.2x EBITDA · P/E 30x · Cap allocation concentration ADVANC',
+    finalVerdict: '🏆 Best stock in coverage 10Y · ทั้งราคาและปันผลขึ้นมหาศาล · Growth >> income now'
+  },
+  {
+    ticker: 'CPALL', name: 'CP All (7-Eleven)', sector: 'Retail', tier: 'S', isFinancial: false,
+    price: 47.75, divYieldCurrent: 3.12, fwdPE: 22.5, pb: 3.8, payout: 45,
+    div: [0.90, 1.00, 1.10, 1.15, 0.90, 0.65, 0.75, 0.90, 1.20, 1.35],
+    prices: [55.00, 70.00, 72.00, 79.00, 56.00, 60.00, 64.00, 58.00, 54.00, 47.75],
+    avgYield10Y: 1.85,
+    verdict5Y: 'poor', verdict10Y: 'okay',
+    summary: 'หุ้นคุณภาพดีสุดในกลุ่ม retail · แต่ราคา 10 ปีตก -13% · Lotus merger ทำให้ market กังวล debt · ปันผลกลับมาแข็งแรง 2024-25 · 22 BUY rating, TP 62.40',
+    bull: 'Best business quality · GP-based pricing = inflation hedge · 13K+ stores · 22 BUY',
+    bear: 'CP debt overhang · ราคา 5Y -16% · domestic consumption proxy',
+    finalVerdict: 'คุณภาพธุรกิจดีที่สุด แต่ราคา 10 ปีไม่ดี · ตอนนี้เริ่ม recovery · Long-term ok'
+  },
+  {
+    ticker: 'ADVANC', name: 'Advanced Info Service', sector: 'Telecom', tier: 'S', isFinancial: false,
+    price: 363.00, divYieldCurrent: 9.48, fwdPE: 20.9, pb: 7.2, payout: 95,
+    div: [10.08, 7.34, 7.34, 7.34, 7.34, 8.59, 8.34, 8.69, 13.40, 34.30],
+    prices: [148.00, 192.00, 175.00, 215.00, 178.00, 196.00, 208.00, 230.00, 285.00, 363.00],
+    avgYield10Y: 5.80,
+    verdict5Y: 'excellent', verdict10Y: 'excellent',
+    summary: '⭐ Telecom oligopoly · ราคา 10 ปี +145% · ปันผล 2025 ทะลุ 34.30 (special) · 95% payout · GULF push for cash · Total 10Y return >250%',
+    bull: 'Oligopoly 3 ราย · ROE 35% · Fiber + 5G dominance · KGI TP 366',
+    bear: '95% payout = no growth · TRUE post-merger competitive · Margin compression',
+    finalVerdict: '🏆 Best dividend stock decade · ทั้งราคาและปันผลแข็งแกร่ง · คุ้มสุดในกลุ่ม telecom'
+  },
+  {
+    ticker: 'BDMS', name: 'Bangkok Dusit Medical', sector: 'Healthcare', tier: 'A', isFinancial: false,
+    price: 19.60, divYieldCurrent: 4.08, fwdPE: 25.4, pb: 3.9, payout: 100,
+    div: [0.60, 0.70, 0.60, 0.65, 0.40, 0.45, 0.55, 0.70, 0.80, 0.80],
+    prices: [22.00, 25.00, 26.00, 24.50, 19.00, 22.00, 28.00, 27.00, 20.50, 19.60],
+    avgYield10Y: 2.65,
+    verdict5Y: 'poor', verdict10Y: 'okay',
+    summary: 'Underrated quality · ราคา 10 ปีลดเล็กน้อย · ปันผลกลับมาแข็งแรงหลัง COVID · Demographic tailwind · BLS worst-case 4.1% · ผมว่า panel underrate',
+    bull: 'Aging society · Medical tourism rebound · Pricing power · 50+ hospitals',
+    bear: 'Payout 100% · Co-payment policy risk · Capex burden',
+    finalVerdict: 'หุ้นปลอดภัย+คุณภาพ · 10Y total return positive · ดีสำหรับ defensive'
+  },
+  {
+    ticker: 'WHAUP', name: 'WHA Utilities & Power', sector: 'Utility', tier: 'B', isFinancial: false,
+    price: 4.94, divYieldCurrent: 3.20, fwdPE: 18.6, pb: 1.40, payout: 60,
+    div: [0.04, 0.06, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14, 0.16],
+    prices: [3.00, 5.50, 6.00, 5.20, 3.20, 3.80, 4.20, 3.50, 3.10, 4.94],
+    avgYield10Y: 2.40,
+    verdict5Y: 'excellent', verdict10Y: 'okay',
+    summary: 'DC play แท้ที่สุดในตลาดไทย · ราคา 5Y +60% recently · ปันผลโต linear · EV/EBITDA 15.5x · 52w range 2.84-5.25 ran already',
+    bull: 'DC water 12-16x usage · 1,124 MW PPA · EPS +28% 2026 (FSS)',
+    bear: 'P/E 18x rich · WHA parent risk · 52w high ใกล้ๆ',
+    finalVerdict: 'Growth play · 10Y return +130% · ปันผลรอง แต่ราคาดี'
+  },
+  {
+    ticker: 'PTT', name: 'PTT Public Co.', sector: 'Energy', tier: 'B', isFinancial: false,
+    price: 29.50, divYieldCurrent: 6.00, fwdPE: 10.8, pb: 0.85, payout: 65,
+    div: [1.00, 1.10, 1.20, 1.40, 1.00, 1.40, 2.00, 2.00, 2.00, 1.90],
+    prices: [38.00, 50.00, 48.00, 44.00, 35.00, 38.00, 35.00, 33.00, 32.00, 29.50],
+    avgYield10Y: 3.85,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: 'ปันผลโต stable แต่ราคาตก 10 ปี -22% · Geopolitical premium support · BLS 6% even worst case · มี downside cyclical risk',
+    bull: 'Diversified income · 6% yield resilient · Government backing',
+    bear: 'Oil cycle downside · Government policy interference · ราคาตก 10 ปี',
+    finalVerdict: '10Y total return +18% (1.8%/ปี) · ปันผลโอเค ราคาไม่ดี · Hedge เท่านั้น'
+  },
+  {
+    ticker: 'PRM', name: 'Prima Marine', sector: 'Shipping', tier: 'B', isFinancial: false,
+    price: 9.45, divYieldCurrent: 6.10, fwdPE: 9.5, pb: 1.85, payout: 55,
+    div: [0.20, 0.25, 0.28, 0.30, 0.30, 0.35, 0.42, 0.50, 0.55, 0.58],
+    prices: [7.00, 7.50, 7.20, 6.50, 5.50, 6.20, 7.00, 7.50, 8.50, 9.45],
+    avgYield10Y: 4.85,
+    verdict5Y: 'good', verdict10Y: 'good',
+    summary: 'Tactical tanker play · SETHD member · TISCO top pick Jan 2026 · ปันผลโต stable +11.2% CAGR · ราคาขึ้นจาก 7 → 9.45 (+35%)',
+    bull: 'Fleet expansion · Geopolitical premium · 6% yield · TISCO pick',
+    bear: 'Tanker overcapacity 2026-27 · Cyclical timing',
+    finalVerdict: 'Tactical play · 10Y total return +75% · ปันผลโอเค · ดี short-medium term'
+  },
+  {
+    ticker: 'KTC', name: 'Krungthai Card', sector: 'Consumer Finance', tier: 'B', isFinancial: false,
+    price: 50.25, divYieldCurrent: 3.50, fwdPE: 11.5, pb: 2.85, payout: 40,
+    div: [0.50, 0.70, 0.85, 0.95, 1.00, 1.10, 1.25, 1.50, 1.70, 1.75],
+    prices: [16.00, 21.00, 35.00, 42.00, 51.00, 64.00, 58.00, 48.00, 52.00, 50.25],
+    avgYield10Y: 2.20,
+    verdict5Y: 'okay', verdict10Y: 'excellent',
+    summary: 'Quality customer base · ปันผลโต stunning จาก 0.50 → 1.75 · ราคา 10 ปี +214% · TIDLOR/MTC ขโมยส่วนแบ่ง · ROE 25.8%',
+    bull: 'High ROE · Aggressive lawsuit policy · Low NPL · 10Y price +214%',
+    bear: 'Credit card market saturated · TIDLOR/MTC competition · Consumer debt 89% GDP',
+    finalVerdict: '⭐ 10Y compounder · ราคาโต ปันผลโต · แต่ growth slowing now'
+  },
+  {
+    ticker: 'TTW', name: 'Thai Tap Water', sector: 'Utility', tier: 'C', isFinancial: false,
+    price: 8.85, divYieldCurrent: 6.90, fwdPE: 12.5, pb: 1.8, payout: 90,
+    div: [0.55, 0.55, 0.58, 0.58, 0.60, 0.60, 0.62, 0.62, 0.62, 0.62],
+    prices: [12.50, 12.00, 13.50, 14.00, 11.00, 10.50, 10.00, 9.50, 9.20, 8.85],
+    avgYield10Y: 5.20,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: 'Moat แข็งแกร่งสุดในลิสต์ · ปันผลแทบไม่โต 10 ปี (0.55→0.62) · ราคาตก -29% · Concession renewal 2034 overhang · 90% payout',
+    bull: 'Monopoly water private · Stable cash flow · 6.9% yield',
+    bear: 'No growth · Concession 2034 risk · PWA negotiation 3-5 yr',
+    finalVerdict: '10Y total return +25% (2.3%/ปี) · ปันผลโอเค ราคาตก · Boring · ไม่คุ้มเทียบเสี่ยง'
+  },
+  {
+    ticker: 'SIRI', name: 'Sansiri', sector: 'Property', tier: 'D', isFinancial: false,
+    price: 1.65, divYieldCurrent: 9.50, fwdPE: 7.5, pb: 0.75, payout: 80,
+    div: [0.13, 0.13, 0.13, 0.10, 0.10, 0.12, 0.13, 0.15, 0.16, 0.16],
+    prices: [1.95, 2.10, 1.95, 1.60, 0.96, 1.20, 1.45, 1.85, 1.88, 1.65],
+    avgYield10Y: 8.20,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: '⚠️ Yield trap · ราคา 10 ปีตก -15% · ปันผลโตเล็กน้อย · 89% household debt · Banks tightening · Avoid',
+    bull: 'P/BV 0.75x cheap · 9.5% yield · Aggressive expansion',
+    bear: 'Property cycle bottom · Gen Y not buying · Bank rejection 50%+',
+    finalVerdict: '⚠️ Avoid · 10Y total return +50% (4.1%/ปี) · ปันผลไม่ชดเชย capital loss + sector decline'
+  },
+  {
+    ticker: 'AP', name: 'AP Thailand', sector: 'Property', tier: 'D', isFinancial: false,
+    price: 7.90, divYieldCurrent: 8.85, fwdPE: 6.8, pb: 0.95, payout: 60,
+    div: [0.30, 0.32, 0.40, 0.45, 0.45, 0.55, 0.65, 0.70, 0.70, 0.70],
+    prices: [6.50, 9.00, 9.50, 7.50, 5.50, 8.50, 9.20, 11.00, 9.50, 7.90],
+    avgYield10Y: 6.50,
+    verdict5Y: 'poor', verdict10Y: 'good',
+    summary: 'Better than SIRI (Mitsubishi JV) · ปันผลโตจาก 0.30 → 0.70 · ราคา 10Y +22% · 5Y ตกเยอะ · Same yield trap dynamics',
+    bull: 'Mitsubishi Estate JV · Fast inventory turn · 8.85% yield',
+    bear: 'Property cycle headwind · Demand decline · Bank financing tight',
+    finalVerdict: 'ดีกว่า SIRI แต่ยังอยู่ใน sector ขาลง · 10Y total return +90% · พอใช้ได้ในระยะยาว'
+  },
+  {
+    ticker: 'HMPRO', name: 'Home Product Center', sector: 'Retail', tier: 'D', isFinancial: false,
+    price: 6.90, divYieldCurrent: 4.50, fwdPE: 14.6, pb: 3.65, payout: 75,
+    div: [0.20, 0.22, 0.28, 0.30, 0.32, 0.34, 0.35, 0.35, 0.32, 0.31],
+    prices: [9.00, 12.00, 13.50, 16.50, 14.00, 13.00, 11.50, 10.00, 8.50, 6.90],
+    avgYield10Y: 2.65,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: '⚠️ CLASSIC VALUE TRAP · ราคา 10 ปีตก -23% · ปันผลเริ่มลด (0.35→0.31) · SSSG -7-8% · Mr DIY 900 stores กิน share',
+    bull: 'Home services growing 9% · Market leader 16-18% · ROE 23%',
+    bear: 'Mr DIY 900 stores · SSSG -7-8% · Mega Home declining',
+    finalVerdict: '⚠️ Strong AVOID · 10Y total return +3% (0.3%/ปี) · ปันผลไม่ชดเชย capital loss · Trap'
+  },
+  {
+    ticker: 'SABINA', name: 'Sabina', sector: 'Retail', tier: 'C', isFinancial: false,
+    price: 18.50, divYieldCurrent: 6.50, fwdPE: 14.5, pb: 2.5, payout: 85,
+    div: [0.50, 0.55, 0.62, 0.70, 0.75, 0.85, 1.10, 1.20, 1.30, 1.20],
+    prices: [20.00, 27.00, 30.00, 27.50, 18.50, 22.00, 28.00, 25.00, 22.00, 18.50],
+    avgYield10Y: 4.60,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: 'Lingerie online killing offline · ราคา 10Y -7.5% · ปันผลเริ่มลด (1.30→1.20) · No pricing power',
+    bull: 'Inventory management strong · Brand recognition · Cash-rich',
+    bear: 'Shopee Premium + Shein eating · Mall traffic declining',
+    finalVerdict: 'Value trap · 10Y total return +35% · ปันผลโอเคแต่ underperform SET'
+  },
+  {
+    ticker: 'ICHI', name: 'Ichitan Group', sector: 'F&B', tier: 'C', isFinancial: false,
+    price: 12.40, divYieldCurrent: 5.20, fwdPE: 14.5, pb: 1.85, payout: 80,
+    div: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.62, 0.65, 0.65],
+    prices: [14.00, 13.50, 12.00, 11.00, 9.50, 11.50, 13.50, 14.00, 13.00, 12.40],
+    avgYield10Y: 4.10,
+    verdict5Y: 'okay', verdict10Y: 'poor',
+    summary: 'Market saturated · ปันผลโต stable · ราคา 10Y -11% · Indonesia expansion ท้าทาย · Sugar tax + Gen Z shift',
+    bull: 'Tea brand recognition · Gen Z healthy pivot · Strong cash flow',
+    bear: 'Domestic saturation · Indonesia tough · Sugar tax · Functional drinks shift',
+    finalVerdict: 'Stagnating · 10Y total return +30% · ปันผลโอเคแต่ราคาไม่ไป'
+  },
+  {
+    ticker: 'SCC', name: 'Siam Cement Group', sector: 'Petrochem', tier: 'D', isFinancial: false,
+    price: 142.00, divYieldCurrent: 2.50, fwdPE: 28.5, pb: 0.85, payout: 65,
+    div: [16.00, 19.00, 19.00, 14.00, 14.00, 18.50, 8.50, 5.50, 4.00, 3.50],
+    prices: [500.00, 480.00, 440.00, 390.00, 360.00, 410.00, 350.00, 280.00, 220.00, 142.00],
+    avgYield10Y: 3.55,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: '⚠️ Severe decline · ราคา 10Y -72% · ปันผลตกจาก 16 → 3.50 · Petrochem cycle bottom · China dumping · Avoid',
+    bull: 'Cement leader · P/BV 0.85x cheap · Cycle bottom possibly',
+    bear: 'China dumping · Demand weak · Cap structure stress',
+    finalVerdict: '⚠️ Wealth destruction decade · 10Y total return -47% · ปันผลไม่ชดเชย collapse · STRONG AVOID'
+  },
+  {
+    ticker: 'RATCH', name: 'Ratch Group', sector: 'IPP', tier: 'C', isFinancial: false,
+    price: 28.00, divYieldCurrent: 5.50, fwdPE: 13.5, pb: 0.95, payout: 80,
+    div: [2.30, 2.35, 2.40, 2.45, 2.50, 2.55, 2.60, 2.60, 1.55, 1.55],
+    prices: [55.00, 70.00, 65.00, 75.00, 50.00, 47.00, 40.00, 35.00, 32.00, 28.00],
+    avgYield10Y: 5.85,
+    verdict5Y: 'poor', verdict10Y: 'poor',
+    summary: 'Old IPP · No growth · ปันผลตก 2024 (2.60→1.55) · ราคา 10Y -49% · Missed DC trend',
+    bull: 'Stable IPP cash flow · 5.5% yield · Conservative debt',
+    bear: 'No growth · Missed DC trend · Cap allocation issues',
+    finalVerdict: '⚠️ 10Y total return -10% · ปันผลโอเคแต่ราคาตก · Decline · GULF เหนือกว่ามาก'
+  }
+];
+
+// =====================================================================
+// MERGE LAYERS + COMPUTE (formulas = data export §2, endpoint = live price)
+// =====================================================================
+const TIER_ORDER = { S: 0, A: 1, B: 2, C: 3, D: 4 };
+const TH_MONTHS = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const fmtDate = iso => { if (!iso) return '—'; const [y, m, d] = iso.split('-'); return `${+d} ${TH_MONTHS[+m - 1]} ${String(+y + 543).slice(-2)}`; };
+const sgn = v => (v > 0 ? '+' : '');
+const fx = (v, d = 2) => (v === null || v === undefined || isNaN(v)) ? '—' : v.toFixed(d);
+const sum = a => a.reduce((x, y) => x + y, 0);
+const chip = k => ({ ok: '<span class="chip ok">VERIFIED</span>', der: '<span class="chip der">DERIVED</span>', seed: '<span class="chip seed">SEED</span>', warn: '<span class="chip warn">CHECK</span>' })[k];
+const SRC_META = { AiO: ['ok', 'AiO (aio.panphol.com)', 'AiO'], TV: ['der', 'TradingView (คำนวณย้อน)', 'TV*'], YF: ['ok', 'Yahoo Finance (cron)', 'YF'] };
+const srcMeta = s => SRC_META[s.src] || ['der', s.src || '—', s.src || '—'];
+const priceChip = s => chip(srcMeta(s)[0]) + (s.stale ? '<span class="chip warn">STALE</span>' : '');
+const srcLabel = s => srcMeta(s)[1];
+
+let yieldMode = 'ttm';
+let currentPeriod = 'month';
+let FEED = { mode: 'embedded', generated: SNAPSHOT_EMBEDDED.generated, flagged: [] };
+let MARKET = SNAPSHOT_EMBEDDED.market;
+let DATA = [];
+
+function computeMetrics(s) {
+  const start = s.prices.findIndex(p => p > 0);          // IPO-aware start
+  const years = 10 - start;
+  const p0 = s.prices[start];
+  const end = s.price;                                    // live endpoint (§1 convention)
+  const totalDiv = sum(s.div.slice(start));
+  const capitalReturn = (end / p0 - 1) * 100;
+  const dividendReturn = totalDiv / p0 * 100;
+  const totalReturn = capitalReturn + dividendReturn;
+  const cagr10Y = (Math.pow(1 + totalReturn / 100, 1 / years) - 1) * 100;
+  const s5 = Math.max(5, start);
+  const p5 = s.prices[s5];
+  const totalReturn5Y = (end / p5 - 1) * 100 + sum(s.div.slice(s5)) / p5 * 100;
+  const cagr5Y = (Math.pow(1 + totalReturn5Y / 100, 1 / (10 - s5)) - 1) * 100;
+  const d0 = s.div.findIndex((d, i) => i >= start && d > 0);
+  const divCAGR = (d0 >= 0 && d0 < 9 && s.div[9] > 0) ? (Math.pow(s.div[9] / s.div[d0], 1 / (9 - d0)) - 1) * 100 : null;
+  const yearlyYields = s.div.map((d, i) => s.prices[i] > 0 ? d / s.prices[i] * 100 : null);
+  const valid = yearlyYields.filter(v => v !== null);
+  const avgYield = sum(valid) / valid.length;
+  return { ...s, startIdx: start, startYear: 2016 + start, years, totalDiv, capitalReturn, dividendReturn,
+           totalReturn, cagr10Y, totalReturn5Y, cagr5Y, divCAGR, yearlyYields, avgYield };
+}
+
+function applySnapshot(snap) {
+  return stocks.map(s0 => {
+    const s = { ...s0, prices: [...s0.prices], div: [...s0.div] };
+    s.seed = { price: s0.price, yld: s0.divYieldCurrent, pe: s0.fwdPE, pb: s0.pb, payout: s0.payout, avgYield: s0.avgYield10Y };
+    s.histFixes = [];
+    (HISTORY_FIXES[s.ticker] || []).forEach(f => { s[f.field][f.idx] = f.value; s.histFixes.push(f.note); });
+    if (s.ticker === 'TIDLOR') s.name = 'Tidlor Holdings';
+    const L = snap.stocks[s.ticker] || {};
+    s.price = L.price; s.asOf = L.asOf; s.src = L.src;
+    s.pe = L.pe ?? null; s.pb = L.pb ?? null; s.yld = L.yld ?? null;
+    s.yldCalc = L.yldCalc ?? L.yld ?? null;
+    s.payout = (s.yldCalc !== null && s.pe !== null) ? s.yldCalc * s.pe : null;
+    s.note = L.note || '';
+    s.info = L.info || '';
+    s.stale = !!L.stale;
+    s.drift = (s.price / s.seed.price - 1) * 100;
+    return computeMetrics(s);
+  });
+}
+
+// =====================================================================
+// FEED LOADER — tries ./snapshot.json (same origin, no key), else embedded
+// Suspicious rows are rejected and shown in red, never displayed silently.
+// =====================================================================
+async function tryLiveSnapshot() {
+  if (location.protocol !== 'file:') {
+    try {
+      const r = await fetch('snapshot.json', { cache: 'no-store' });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const snap = await r.json();
+      if (!snap || !snap.stocks) throw new Error('bad shape');
+      const merged = { ...SNAPSHOT_EMBEDDED.stocks };
+      const flagged = [];
+      for (const [t, v] of Object.entries(snap.stocks)) {
+        const base = SNAPSHOT_EMBEDDED.stocks[t];
+        const bad = !base || !(v.price > 0)
+          || (v.prevClose > 0 && Math.abs(v.price / v.prevClose - 1) > 0.15)
+          || Math.abs(v.price / base.price - 1) > 0.60;
+        if (bad) flagged.push(`${t} ${v.price ?? '?'}`);
+        else merged[t] = { ...base, ...v };
+      }
+      FEED = { mode: 'live', generated: snap.generated || '?', flagged };
+      if (snap.market) MARKET = { ...MARKET, ...snap.market, set_midday: snap.market.set_midday ?? null, set_midday_date: snap.market.set_midday_date ?? null };
+      DATA = applySnapshot({ stocks: merged });
+      renderAll();
+    } catch (e) { FEED.mode = 'embedded'; }
+  }
+  setStatus();
+}
+
+function setStatus() {
+  const el = document.getElementById('feedStatus');
+  if (FEED.mode === 'live') {
+    el.innerHTML = `🟢 โหลด <b>snapshot.json</b> แล้ว (generated ${FEED.generated})` +
+      (FEED.flagged.length ? ` · 🔴 ปฏิเสธค่าผิดปกติ: <b>${FEED.flagged.join(', ')}</b> — แสดงค่ารอบ 22 ก.ย. 69 แทน` : '');
+  } else {
+    el.innerHTML = `⚪ ใช้ข้อมูลที่ฝังในไฟล์ (รอบ <b>22 ก.ย. 69</b>) — ไม่พบ snapshot.json หรือเปิดไฟล์จากเครื่อง`;
+  }
+}
+
+function renderHeader() {
+  const m = MARKET;
+  const dates = DATA.map(s => s.asOf).filter(Boolean).sort();
+  const gen = FEED.mode === 'live' ? FEED.generated : SNAPSHOT_EMBEDDED.generated;
+  document.getElementById('asofLine').innerHTML = `📅 อัปเดต <span>${fmtDate(String(gen).slice(0, 10))}</span> · ราคาปิดล่าสุด ${fmtDate(dates[0])} – ${fmtDate(dates[dates.length - 1])} (ดูวันที่รายตัว)`;
+  document.getElementById('mktLine').innerHTML =
+    `📊 SET <span>${m.set_close.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span> ปิด ${fmtDate(m.set_close_date)}` +
+    (m.set_midday ? ` · ภาคเช้า ${fmtDate(m.set_midday_date)} <span>${m.set_midday.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>` : '');
+}
+
+// =====================================================================
+// TABS
+// =====================================================================
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    if (btn.dataset.tab === 'financial') renderDeepDive();
+  });
+});
+
+// =====================================================================
+// CALCULATOR
+// =====================================================================
+document.querySelectorAll('.calc-period-btn:not(.yield-mode)').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.calc-period-btn:not(.yield-mode)').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    currentPeriod = b.dataset.period;
+    renderIncomeCards();
+  });
+});
+document.querySelectorAll('.yield-mode').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.yield-mode').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    yieldMode = b.dataset.mode;
+    renderIncomeCards();
+  });
+});
+document.getElementById('targetIncome').addEventListener('input', renderIncomeCards);
+
+const yieldFor = s => yieldMode === 'ttm' ? s.yldCalc : s.avgYield;
+const retLabel = s => s.startIdx > 0 ? `Since IPO ('${String(s.startYear).slice(-2)})` : '10Y Return';
+
+function renderIncomeCards() {
+  const target = parseFloat(document.getElementById('targetIncome').value) || 1000;
+  const yearly = currentPeriod === 'month' ? target * 12 : target;
+  document.getElementById('calcSubtitle').innerHTML = yieldMode === 'ttm'
+    ? 'คำนวณจากปันผลที่จ่ายจริงย้อนหลัง 12 เดือน (Yield TTM) × ราคาล่าสุดที่ verify แล้ว · จำนวนหุ้น = ปันผลที่ต้องการ ÷ ปันผลต่อหุ้น'
+    : 'คำนวณจาก Yield เฉลี่ย 2016–2025 ของชุด <b style="color:#ff9080">SEED</b> × ราคาล่าสุด — ใช้เทียบเชิงทิศทางเท่านั้น';
+  document.getElementById('finHeading').textContent =
+    '🏦 หุ้นกลุ่มการเงิน — เรียงตาม ' + (yieldMode === 'ttm' ? 'Yield TTM' : 'Yield เฉลี่ย 10 ปี (SEED)');
+  const key = s => yieldFor(s) ?? -1;
+  const fin = DATA.filter(s => s.isFinancial).sort((a, b) => key(b) - key(a));
+  const oth = DATA.filter(s => !s.isFinancial).sort((a, b) => TIER_ORDER[a.tier] - TIER_ORDER[b.tier] || key(b) - key(a));
+  document.getElementById('financialCards').innerHTML = fin.map(s => renderCard(s, yearly)).join('');
+  document.getElementById('otherCards').innerHTML = oth.map(s => renderCard(s, yearly)).join('');
+}
+
+function renderCard(s, yearly) {
+  const y = yieldFor(s);
+  let calc;
+  if (!y) {
+    calc = `<div class="calc-result">
+        <div class="row"><span style="color: var(--text-dim);">ไม่มี Yield TTM ที่ verify ได้</span><span>—</span></div>
+        <div class="row highlight"><span>สลับเป็นโหมดเฉลี่ย 10 ปีเพื่อดูค่าประมาณ</span><span></span></div></div>`;
+  } else {
+    const dps = y / 100 * s.price;
+    const shares = Math.ceil(yearly / dps / 100) * 100;
+    const capital = Math.round(shares * s.price);
+    calc = `<div class="calc-result">
+        <div class="row"><span style="color: var(--text-dim);">ปันผลที่ต้องการ</span><span>${Math.round(yearly).toLocaleString()} บาท/ปี</span></div>
+        <div class="row"><span style="color: var(--text-dim);">ปันผลต่อหุ้น ≈ (${y.toFixed(2)}%)</span><span>${dps.toFixed(2)} บาท</span></div>
+        <div class="row"><span style="color: var(--text-dim);">จำนวนหุ้น (ปัด 100)</span><span style="color: var(--gold-bright);">≈ ${shares.toLocaleString()} หุ้น</span></div>
+        <div class="row highlight"><span>เงินลงทุน ≈</span><span>${capital.toLocaleString()} บาท</span></div></div>`;
+  }
+  const noteLine = s.note ? `<span style="color: var(--yellow);">⚠ ${s.note}</span><br>` : '';
+  const txt = s.summary.length > 110 ? s.summary.substring(0, 110) + '…' : s.summary;
+  return `
+    <div class="income-card">
+      <div class="corner-tag tier-${s.tier}">TIER ${s.tier}</div>
+      <div class="ticker-row">
+        <div>
+          <div class="ticker">${s.ticker}</div>
+          <div style="font-size: 10px; color: var(--text-dim);">${s.name}</div>
+        </div>
+        <div class="price">
+          ราคา (THB) ${priceChip(s)}
+          <span class="val">${s.price.toFixed(2)}</span>
+          <span class="asof">ปิด ${fmtDate(s.asOf)} · ${srcMeta(s)[2]}${s.stale ? ' · ค้าง' : ''}</span>
+        </div>
+      </div>
+      <div class="yield-bar">
+        <div class="metric">
+          <div class="lbl">Yield TTM</div>
+          <div class="val">${s.yldCalc !== null ? s.yldCalc.toFixed(2) + '%' : 'n/a'}</div>
+        </div>
+        <div class="metric purple">
+          <div class="lbl">เฉลี่ย 10 ปี · SEED</div>
+          <div class="val">${s.avgYield.toFixed(2)}%</div>
+        </div>
+        <div class="metric ${s.totalReturn > 100 ? '' : s.totalReturn > 0 ? 'purple' : 'red'}">
+          <div class="lbl">${retLabel(s)} · SEED</div>
+          <div class="val">${sgn(s.totalReturn)}${s.totalReturn.toFixed(0)}%</div>
+        </div>
+      </div>
+      ${calc}
+      <div class="verdict-mini">${noteLine}<span style="color: var(--text-muted);">มุมมอง 18 พ.ค.:</span> ${txt}</div>
+    </div>`;
+}
+
+// =====================================================================
+// DEEP DIVE
+// =====================================================================
+let deepDiveRendered = false;
+let charts = [];
+function renderDeepDive() {
+  if (deepDiveRendered) return;
+  charts.forEach(c => c.destroy()); charts = [];
+  const fin = DATA.filter(s => s.isFinancial);
+  document.getElementById('deepDiveContainer').innerHTML = fin.map((s, idx) => `
+    <div class="deep-dive">
+      <div class="deep-dive-header">
+        <div>
+          <div class="deep-dive-title">${s.ticker}<span class="company-name">${s.name} · ${s.sector}</span></div>
+        </div>
+        <div class="deep-dive-snapshot">
+          <span style="font-size: 11px; color: var(--text-dim);">ราคาปิด ${fmtDate(s.asOf)} (THB) ${priceChip(s)}</span>
+          <span class="price-big">${s.price.toFixed(2)}</span>
+          <span class="${s.totalReturn > 0 ? 'change-pos' : 'change-neg'}">
+            ${retLabel(s)} (SEED base): ${sgn(s.totalReturn)}${s.totalReturn.toFixed(1)}% (CAGR ${sgn(s.cagr10Y)}${s.cagr10Y.toFixed(1)}%/ปี)
+          </span>
+        </div>
+      </div>
+      ${s.note ? `<div class="frozen-note" style="color: var(--yellow); font-style: normal;">⚠ ${s.note}</div>` : ''}
+      <div class="dive-stats-grid">
+        <div class="dive-stat gold"><div class="lbl">Yield TTM ✓</div><div class="val">${s.yld !== null ? s.yld.toFixed(2) + '%' : 'n/a'}</div></div>
+        <div class="dive-stat"><div class="lbl">Yield เฉลี่ย 10Y · SEED</div><div class="val">${s.avgYield.toFixed(1)}%</div></div>
+        <div class="dive-stat"><div class="lbl">P/E TTM ✓</div><div class="val">${fx(s.pe, 1)}×</div></div>
+        <div class="dive-stat"><div class="lbl">P/BV ${s.pb !== null ? '✓' : ''}</div><div class="val">${s.pb !== null ? s.pb.toFixed(2) + '×' : '<span class="na">—</span>'}</div></div>
+        <div class="dive-stat"><div class="lbl">Payout (implied)</div><div class="val">${s.payout !== null ? s.payout.toFixed(0) + '%' : '—'}</div></div>
+        <div class="dive-stat ${s.divCAGR > 5 ? 'green' : s.divCAGR < 0 ? 'red' : ''}"><div class="lbl">Div CAGR · SEED</div><div class="val">${s.divCAGR === null ? 'n/a' : sgn(s.divCAGR) + s.divCAGR.toFixed(1) + '%'}</div></div>
+      </div>
+      <div class="dive-charts">
+        <div class="dive-chart">
+          <h4>💰 ปันผลย้อนหลัง (DPS · THB/หุ้น) · SEED</h4>
+          <div class="chart-wrap"><canvas id="divChart-${idx}"></canvas></div>
+        </div>
+        <div class="dive-chart">
+          <h4>📈 ราคาหุ้นสิ้นปี (SEED) + ราคาล่าสุด (verified)</h4>
+          <div class="chart-wrap"><canvas id="priceChart-${idx}"></canvas></div>
+        </div>
+      </div>
+      <div class="frozen-note">ข้อความด้านล่างเป็นมุมมอง ณ 18 พ.ค. 2569 ยังไม่ refresh รอบนี้ — ตัวเลขในข้อความอาจไม่ตรงกับราคาปัจจุบัน</div>
+      <div class="dive-verdict">
+        <div class="verdict-card"><h5>📝 SUMMARY</h5><p>${s.summary}</p></div>
+        <div class="verdict-card green"><h5>✅ BULL CASE</h5><p>${s.bull}</p></div>
+        <div class="verdict-card red"><h5>⚠️ BEAR CASE</h5><p>${s.bear}</p></div>
+      </div>
+      <div class="final-verdict">
+        <div>
+          <h5>🎯 VERDICT · คุ้มค่าลงทุนหรือไม่? (18 พ.ค.)</h5>
+          <div class="verdict-text">${s.finalVerdict}</div>
+        </div>
+        <div class="return-summary ${s.totalReturn > 100 ? 'green' : s.totalReturn > 0 ? '' : 'red'}">
+          <div class="lbl">${retLabel(s)} · SEED base</div>
+          <div class="val">${sgn(s.totalReturn)}${s.totalReturn.toFixed(0)}%</div>
+          <div class="annual">
+            ${sgn(s.cagr10Y)}${s.cagr10Y.toFixed(1)}% / ปี (CAGR)<br>
+            5Y: ${sgn(s.totalReturn5Y)}${s.totalReturn5Y.toFixed(0)}% (${sgn(s.cagr5Y)}${s.cagr5Y.toFixed(1)}%/ปี)
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+
+  const years = ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+  const tick = { color: '#8a9bb8', font: { size: 10 } };
+  fin.forEach((s, idx) => {
+    charts.push(new Chart(document.getElementById(`divChart-${idx}`), {
+      type: 'bar',
+      data: {
+        labels: years,
+        datasets: [{
+          label: 'DPS (THB)', data: s.div.map(d => d > 0 ? d : null),
+          backgroundColor: s.div.map((d, i) => i === 9 ? '#e6c989' : '#c9a961'),
+          borderColor: '#8b7340', borderWidth: 1, borderRadius: 4
+        }, {
+          label: 'Yield ที่ราคา ณ ปีนั้น (%)', data: s.yearlyYields, type: 'line',
+          borderColor: '#5fc9c9', backgroundColor: 'transparent', tension: 0.3,
+          pointRadius: 4, pointBackgroundColor: '#5fc9c9', yAxisID: 'y1', spanGaps: true
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: 'top', labels: tick } },
+        scales: {
+          y: { beginAtZero: true, ticks: tick, grid: { color: '#2a3a5a' }, title: { display: true, text: 'DPS (THB)', color: '#c9a961', font: { size: 10 } } },
+          y1: { position: 'right', beginAtZero: true, ticks: { color: '#5fc9c9', font: { size: 10 }, callback: v => v.toFixed(1) + '%' }, grid: { display: false }, title: { display: true, text: 'Yield %', color: '#5fc9c9', font: { size: 10 } } },
+          x: { ticks: tick, grid: { display: false } }
+        }
+      }
+    }));
+    const pts = [...s.prices.map(p => p > 0 ? p : null), s.price];
+    charts.push(new Chart(document.getElementById(`priceChart-${idx}`), {
+      type: 'line',
+      data: {
+        labels: [...years, 'ล่าสุด'],
+        datasets: [{
+          label: 'Price (THB)', data: pts, borderColor: '#c9a961', backgroundColor: 'rgba(201, 169, 97, 0.15)',
+          fill: true, tension: 0.35, borderWidth: 2.5, spanGaps: true,
+          pointRadius: pts.map((_, i) => i === 10 ? 7 : 5),
+          pointBackgroundColor: pts.map((_, i) => i === 10 ? '#7bc99a' : '#e6c989'),
+          pointBorderColor: '#0a1628', pointBorderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { ticks: tick, grid: { color: '#2a3a5a' } }, x: { ticks: tick, grid: { display: false } } }
+      }
+    }));
+  });
+  deepDiveRendered = true;
+}
+
+// =====================================================================
+// COMPARISON TABLES
+// =====================================================================
+function renderComparison() {
+  const sorted = [...DATA].sort((a, b) => TIER_ORDER[a.tier] - TIER_ORDER[b.tier] || b.totalReturn - a.totalReturn);
+  document.getElementById('divComparisonBody').innerHTML = sorted.map(s => {
+    const up = s.divCAGR !== null && s.divCAGR > 5, down = s.divCAGR !== null && s.divCAGR < 0;
+    return `<tr>
+      <td class="left"><span class="ticker">${s.ticker}</span><span class="name">${s.name}</span></td>
+      ${s.div.map(d => `<td style="color: ${d > 0 ? 'var(--text)' : 'var(--text-muted)'};">${d > 0 ? d.toFixed(2) : '-'}</td>`).join('')}
+      <td style="color: var(--gold-bright); font-weight: 700;">${s.totalDiv.toFixed(2)}</td>
+      <td class="${up ? 'comp-pos' : down ? 'comp-neg' : ''}" style="font-weight: 700;">${s.divCAGR === null ? 'n/a' : sgn(s.divCAGR) + s.divCAGR.toFixed(1) + '%'}</td>
+      <td>${up ? '📈' : down ? '📉' : '➖'}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('priceComparisonBody').innerHTML = sorted.map(s => {
+    let vt, vc;
+    if (s.cagr10Y > 10) { vt = '🏆 ดีมาก'; vc = 'var(--gold)'; }
+    else if (s.cagr10Y > 6) { vt = '✅ ดี'; vc = 'var(--green-bright)'; }
+    else if (s.cagr10Y > 3) { vt = '➖ พอใช้'; vc = 'var(--yellow)'; }
+    else if (s.cagr10Y > 0) { vt = '⚠️ ไม่ดี'; vc = '#ff9080'; }
+    else { vt = '❌ แย่'; vc = 'var(--red)'; }
+    return `<tr>
+      <td class="left"><span class="ticker">${s.ticker}</span><span class="name">${s.name}</span></td>
+      <td>${s.prices[s.startIdx].toFixed(2)}<br><span class="asof">สิ้นปี ${s.startYear}${s.startIdx > 0 ? ' (IPO)' : ''}</span></td>
+      <td style="color: var(--gold-bright); font-weight: 700;">${s.price.toFixed(2)}<br><span class="asof">${fmtDate(s.asOf)}</span></td>
+      <td class="${s.capitalReturn > 0 ? 'comp-pos' : 'comp-neg'}" style="font-weight: 700;">${sgn(s.capitalReturn)}${s.capitalReturn.toFixed(1)}%</td>
+      <td>${s.totalDiv.toFixed(2)} THB</td>
+      <td class="comp-pos">+${s.dividendReturn.toFixed(0)}%</td>
+      <td class="${s.totalReturn > 0 ? 'comp-pos' : 'comp-neg'}" style="font-weight: 700; font-size: 14px;">${sgn(s.totalReturn)}${s.totalReturn.toFixed(0)}%</td>
+      <td>${sgn(s.cagr10Y)}${s.cagr10Y.toFixed(1)}%${s.startIdx > 0 ? `<br><span class="asof">${s.years} ปี</span>` : ''}</td>
+      <td style="color: ${vc}; font-weight: 700;">${vt}</td>
+    </tr>`;
+  }).join('');
+}
+
+// =====================================================================
+// TIER GRID
+// =====================================================================
+function renderTierGrid() {
+  const names = { S: 'TIER S · Best Quality', A: 'TIER A · Quality Yield', B: 'TIER B · Acceptable', C: 'TIER C · Caution', D: 'TIER D · Avoid' };
+  document.getElementById('tierGrid').innerHTML = ['S', 'A', 'B', 'C', 'D'].map(tier => {
+    const t = DATA.filter(s => s.tier === tier).sort((a, b) => b.totalReturn - a.totalReturn);
+    return `<div class="tier-column ${tier}">
+      <h3>${names[tier]} <span class="count">${t.length} stocks</span></h3>
+      ${t.map(s => `
+        <div class="tier-stock-row">
+          <div><div class="tk">${s.ticker}</div><div class="name">${s.name}</div></div>
+          <div style="font-size: 11px; color: var(--text-dim); line-height: 1.4;">
+            ${s.price.toFixed(2)} ฿ · Yield ${s.yld !== null ? s.yld.toFixed(1) + '%' : 'n/a'} · P/E ${fx(s.pe, 1)}×<br>
+            <span style="font-size: 10px;">Div CAGR ${s.divCAGR === null ? 'n/a' : sgn(s.divCAGR) + s.divCAGR.toFixed(1) + '%'} · SEED</span>
+          </div>
+          <div class="stat ${s.totalReturn > 0 ? '' : 'comp-neg'}">
+            ${sgn(s.totalReturn)}${s.totalReturn.toFixed(0)}%
+            <span class="small">${s.startIdx > 0 ? 'Since IPO' : '10Y Total'}</span>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  }).join('');
+}
+
+// =====================================================================
+// AUDIT TAB — live snapshot + drift detector vs 18 May seed
+// =====================================================================
+function renderAudit() {
+  const rows = [...DATA].sort((a, b) => (b.isFinancial - a.isFinancial) || TIER_ORDER[a.tier] - TIER_ORDER[b.tier] || a.ticker.localeCompare(b.ticker));
+  document.getElementById('auditBody').innerHTML = rows.map(s => {
+    const flags = [];
+    let lvl = '';
+    if (s.note) { flags.push('⚠ ' + s.note); lvl = /ผิด|>100%|ขัด|ไม่มี/.test(s.note) ? 'bad' : 'mid'; }
+    if (s.info) flags.push(s.info);
+    if (Math.abs(s.drift) > 25 && !/ผิดแน่นอน/.test(s.note)) { flags.push(`drift ${sgn(s.drift)}${s.drift.toFixed(0)}% vs seed — ตรวจ history ก่อนใช้`); if (!lvl) lvl = 'mid'; }
+    s.histFixes.forEach(h => flags.push('history: ' + h));
+    if (s.src === 'TV') flags.push('ราคาปิดคำนวณย้อนจาก %chg ของ TradingView');
+    if (s.stale) { flags.push('⚠ cron ดึงราคาใหม่ไม่ได้ — ใช้ค่ารอบก่อน'); lvl = 'bad'; }
+    const driftCls = Math.abs(s.drift) > 25 ? 'comp-neg' : '';
+    const yCell = s.yld === null ? '<span class="na">n/a</span>'
+      : s.yldCalc !== s.yld ? `${s.yld.toFixed(2)}%<br><span class="asof">calc ${s.yldCalc.toFixed(2)}%</span>` : `${s.yld.toFixed(2)}%`;
+    return `<tr>
+      <td class="left"><span class="ticker">${s.ticker}</span><span class="name">${s.name}</span></td>
+      <td>${s.tier}</td>
+      <td style="color: var(--gold-bright); font-weight: 700;">${s.price.toFixed(2)}</td>
+      <td style="white-space: nowrap;">${fmtDate(s.asOf)}</td>
+      <td>${priceChip(s)}<br><span class="asof">${srcLabel(s)}</span></td>
+      <td>${fx(s.pe, 2)}</td>
+      <td>${s.pb !== null ? s.pb.toFixed(2) : '<span class="na">—</span>'}</td>
+      <td>${yCell}</td>
+      <td>${s.payout !== null ? s.payout.toFixed(0) + '%' : '—'}</td>
+      <td style="color: var(--text-muted);">${s.seed.price.toFixed(2)}</td>
+      <td class="${driftCls}" style="font-weight: 700;">${sgn(s.drift)}${s.drift.toFixed(0)}%</td>
+      <td class="audit-flag ${lvl}">${flags.length ? flags.join('<br>') : '—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// =====================================================================
+// RENDER ALL
+// =====================================================================
+function renderAll() {
+  renderHeader();
+  renderIncomeCards();
+  renderComparison();
+  renderTierGrid();
+  renderAudit();
+  deepDiveRendered = false;
+  if (document.getElementById('tab-financial').classList.contains('active')) renderDeepDive();
+}
+
+DATA = applySnapshot(SNAPSHOT_EMBEDDED);
+renderAll();
+tryLiveSnapshot();
+</script>
+
+</body>
+</html>
