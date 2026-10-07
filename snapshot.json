@@ -1,58 +1,58 @@
 {
- "generated": "2026-10-06T23:52+07:00",
+ "generated": "2026-10-08T00:28+07:00",
  "source": "Yahoo Finance chart endpoint · valuation recomputed from fundamentals.json (2026-09-22)",
  "stocks": {
   "SCB": {
-   "price": 148.0,
-   "prevClose": 149.5,
-   "asOf": "2026-10-06",
+   "price": 146.0,
+   "prevClose": 149.0,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 11.45,
-   "pb": 1.03,
-   "yld": 7.62
+   "pe": 11.3,
+   "pb": 1.02,
+   "yld": 7.73
   },
   "KBANK": {
-   "price": 234.0,
-   "prevClose": 234.0,
-   "asOf": "2026-10-06",
+   "price": 235.0,
+   "prevClose": 233.0,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 10.75,
-   "pb": 0.95,
-   "yld": 5.99,
+   "pe": 10.79,
+   "pb": 0.96,
+   "yld": 5.96,
    "note": "seed 154 ต่ำกว่า 52W low 163 → ราคา seed ผิดแน่นอน"
   },
   "KKP": {
-   "price": 112.5,
-   "prevClose": 110.5,
-   "asOf": "2026-10-06",
+   "price": 113.5,
+   "prevClose": 111.5,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 12.87,
-   "pb": 1.4,
-   "yld": 4.8
+   "pe": 12.99,
+   "pb": 1.42,
+   "yld": 4.76
   },
   "KTB": {
-   "price": 41.75,
-   "prevClose": 41.0,
-   "asOf": "2026-10-06",
+   "price": 42.0,
+   "prevClose": 41.25,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 11.68,
-   "pb": 1.28,
-   "yld": 4.99,
+   "pe": 11.75,
+   "pb": 1.29,
+   "yld": 4.96,
    "info": "yield คำนวณจาก DPS TTM 2.08 (TradingView)"
   },
   "TISCO": {
-   "price": 123.5,
+   "price": 125.5,
    "prevClose": 124.5,
-   "asOf": "2026-10-06",
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 14.4,
+   "pe": 14.63,
    "pb": null,
-   "yld": 6.3
+   "yld": 6.2
   },
   "BBL": {
    "price": 183.0,
    "prevClose": 184.5,
-   "asOf": "2026-10-06",
+   "asOf": "2026-10-07",
    "src": "YF",
    "pe": 8.31,
    "pb": 0.6,
@@ -60,28 +60,28 @@
    "info": "P/BV ใช้ BV 303.61 จาก AiO"
   },
   "TCAP": {
-   "price": 78.5,
-   "prevClose": 81.0,
-   "asOf": "2026-10-06",
+   "price": 79.25,
+   "prevClose": 79.25,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 9.42,
+   "pe": 9.51,
    "pb": null,
-   "yld": 4.46
+   "yld": 4.42
   },
   "TIDLOR": {
-   "price": 16.5,
+   "price": 16.7,
    "prevClose": 16.7,
-   "asOf": "2026-10-06",
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 8.55,
+   "pe": 8.65,
    "pb": null,
-   "yld": 6.32,
+   "yld": 6.24,
    "note": "yield TTM 5.8% ขัดกับ seed 1.8% — ตรวจว่ารวมปันผลหุ้น/พิเศษหรือไม่"
   },
   "GULF": {
    "price": 59.75,
    "prevClose": 59.0,
-   "asOf": "2026-10-06",
+   "asOf": "2026-10-07",
    "src": "YF",
    "pe": 23.71,
    "pb": null,
@@ -89,146 +89,146 @@
   },
   "CPALL": {
    "price": 42.5,
-   "prevClose": 42.5,
-   "asOf": "2026-10-06",
+   "prevClose": 42.25,
+   "asOf": "2026-10-07",
    "src": "YF",
    "pe": 12.42,
    "pb": 2.56,
    "yld": 3.89
   },
   "ADVANC": {
-   "price": 341.0,
-   "prevClose": 342.0,
-   "asOf": "2026-10-06",
+   "price": 339.0,
+   "prevClose": 345.0,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 18.94,
-   "pb": 19.4,
-   "yld": 10.06,
-   "yldCalc": 4.9,
+   "pe": 18.83,
+   "pb": 19.28,
+   "yld": 10.11,
+   "yldCalc": 4.93,
    "note": "Yield TTM 9.9% รวมปันผลพิเศษ · เครื่องคิดใช้ dps_recurring"
   },
   "BDMS": {
-   "price": 18.9,
-   "prevClose": 19.2,
-   "asOf": "2026-10-06",
+   "price": 19.0,
+   "prevClose": 19.0,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 19.69,
+   "pe": 19.79,
    "pb": null,
-   "yld": 3.99
+   "yld": 3.97
   },
   "WHAUP": {
-   "price": 6.65,
-   "prevClose": 6.95,
-   "asOf": "2026-10-06",
+   "price": 6.9,
+   "prevClose": 6.9,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 17.05,
+   "pe": 17.69,
    "pb": null,
-   "yld": 3.83
+   "yld": 3.69
   },
   "PTT": {
-   "price": 41.5,
+   "price": 40.5,
    "prevClose": 40.75,
-   "asOf": "2026-10-06",
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 9.56,
+   "pe": 9.33,
    "pb": null,
-   "yld": 5.09
+   "yld": 5.22
   },
   "PRM": {
-   "price": 8.45,
-   "prevClose": 8.7,
-   "asOf": "2026-10-06",
+   "price": 8.65,
+   "prevClose": 8.65,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 8.99,
+   "pe": 9.21,
    "pb": null,
-   "yld": 5.86
+   "yld": 5.72
   },
   "KTC": {
-   "price": 33.5,
-   "prevClose": 34.5,
-   "asOf": "2026-10-06",
+   "price": 34.5,
+   "prevClose": 34.0,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 10.24,
+   "pe": 10.55,
    "pb": null,
-   "yld": 5.39
+   "yld": 5.23
   },
   "TTW": {
    "price": 10.0,
    "prevClose": 10.0,
-   "asOf": "2026-10-06",
+   "asOf": "2026-10-07",
    "src": "YF",
    "pe": 12.82,
    "pb": null,
    "yld": 6.06
   },
   "SIRI": {
-   "price": 1.42,
-   "prevClose": 1.44,
-   "asOf": "2026-10-06",
+   "price": 1.43,
+   "prevClose": 1.43,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 5.68,
+   "pe": 5.72,
    "pb": null,
-   "yld": 9.16
+   "yld": 9.1
   },
   "AP": {
-   "price": 7.8,
-   "prevClose": 7.75,
-   "asOf": "2026-10-06",
+   "price": 7.85,
+   "prevClose": 7.8,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 5.56,
+   "pe": 5.6,
    "pb": 0.53,
-   "yld": 6.67
+   "yld": 6.62
   },
   "HMPRO": {
-   "price": 6.55,
-   "prevClose": 6.3,
-   "asOf": "2026-10-06",
+   "price": 6.5,
+   "prevClose": 6.35,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 14.24,
+   "pe": 14.13,
    "pb": null,
-   "yld": 5.9
+   "yld": 5.94
   },
   "SABINA": {
-   "price": 15.4,
-   "prevClose": 15.3,
-   "asOf": "2026-10-06",
+   "price": 15.3,
+   "prevClose": 15.4,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 13.03,
-   "pb": 2.93,
+   "pe": 12.94,
+   "pb": 2.91,
    "yld": null,
    "note": "ไม่มี DPS ที่ verify ได้ — ปล่อย null ไว้จนกว่าจะเช็คจาก SET"
   },
   "ICHI": {
-   "price": 13.2,
-   "prevClose": 13.6,
-   "asOf": "2026-10-06",
+   "price": 13.4,
+   "prevClose": 13.5,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 13.51,
-   "pb": 3.11,
-   "yld": 8.33,
+   "pe": 13.71,
+   "pb": 3.15,
+   "yld": 8.21,
    "note": "payout implied >100% — ปันผลเกินกำไร TTM"
   },
   "SCC": {
-   "price": 250.0,
-   "prevClose": 254.0,
-   "asOf": "2026-10-06",
+   "price": 265.0,
+   "prevClose": 245.0,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 22.41,
+   "pe": 23.75,
    "pb": null,
-   "yld": 2.35
+   "yld": 2.22
   },
   "RATCH": {
-   "price": 37.0,
-   "prevClose": 37.0,
-   "asOf": "2026-10-06",
+   "price": 37.5,
+   "prevClose": 36.75,
+   "asOf": "2026-10-07",
    "src": "YF",
-   "pe": 14.45,
+   "pe": 14.65,
    "pb": null,
-   "yld": 4.39
+   "yld": 4.33
   }
  },
  "market": {
-  "set_close": 7811.5,
-  "set_close_date": "2026-10-06"
+  "set_close": 7783.55,
+  "set_close_date": "2026-10-07"
  }
 }
