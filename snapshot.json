@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T22:09+07:00",
+ "generated": "2026-10-16T21:56+07:00",
  "source": "Yahoo Finance chart endpoint · valuation recomputed from fundamentals.json (2026-09-22)",
  "stocks": {
   "SCB": {
@@ -228,7 +228,7 @@
   }
  },
  "market": {
-  "set_close": 7690.08,
-  "set_close_date": "2026-10-15"
+  "set_close": 7757.09,
+  "set_close_date": "2026-10-16"
  }
 }
