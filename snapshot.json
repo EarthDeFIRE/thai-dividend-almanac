@@ -1,197 +1,197 @@
 {
- "generated": "2026-11-18T02:15+07:00",
+ "generated": "2026-11-19T01:55+07:00",
  "source": "Yahoo Finance chart endpoint · valuation recomputed from fundamentals.json (2026-09-22)",
  "stocks": {
   "SCB": {
-   "price": 154.0,
+   "price": 153.5,
    "prevClose": 153.0,
-   "asOf": "2026-11-17",
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 11.92,
-   "pb": 1.08,
-   "yld": 7.33
+   "pe": 11.88,
+   "pb": 1.07,
+   "yld": 7.35
   },
   "KBANK": {
-   "price": 255.0,
-   "prevClose": 243.0,
-   "asOf": "2026-11-17",
+   "price": 251.0,
+   "prevClose": 246.0,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 11.71,
-   "pb": 1.04,
-   "yld": 5.49,
+   "pe": 11.53,
+   "pb": 1.02,
+   "yld": 5.58,
    "note": "seed 154 ต่ำกว่า 52W low 163 → ราคา seed ผิดแน่นอน"
   },
   "KKP": {
-   "price": 116.0,
-   "prevClose": 114.0,
-   "asOf": "2026-11-17",
+   "price": 115.5,
+   "prevClose": 114.5,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 13.27,
-   "pb": 1.45,
-   "yld": 4.66
+   "pe": 13.21,
+   "pb": 1.44,
+   "yld": 4.68
   },
   "KTB": {
-   "price": 42.8,
-   "prevClose": 42.25,
-   "asOf": "2026-11-17",
+   "price": 42.7,
+   "prevClose": 42.75,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 11.97,
-   "pb": 1.32,
-   "yld": 4.87,
+   "pe": 11.95,
+   "pb": 1.31,
+   "yld": 4.88,
    "info": "yield คำนวณจาก DPS TTM 2.08 (TradingView)"
   },
   "TISCO": {
    "price": 127.0,
    "prevClose": 125.0,
-   "asOf": "2026-11-17",
+   "asOf": "2026-11-18",
    "src": "YF",
    "pe": 14.8,
    "pb": null,
    "yld": 6.12
   },
   "BBL": {
-   "price": 183.5,
-   "prevClose": 181.5,
-   "asOf": "2026-11-17",
+   "price": 181.5,
+   "prevClose": 182.0,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 8.33,
+   "pe": 8.24,
    "pb": 0.6,
-   "yld": 5.54,
+   "yld": 5.6,
    "info": "P/BV ใช้ BV 303.61 จาก AiO"
   },
   "TCAP": {
-   "price": 78.75,
-   "prevClose": 74.25,
-   "asOf": "2026-11-17",
+   "price": 77.25,
+   "prevClose": 75.25,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 9.45,
+   "pe": 9.27,
    "pb": null,
-   "yld": 4.45
+   "yld": 4.53
   },
   "TIDLOR": {
-   "price": 16.95,
-   "prevClose": 16.4,
-   "asOf": "2026-11-17",
+   "price": 16.9,
+   "prevClose": 16.9,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 8.78,
+   "pe": 8.76,
    "pb": null,
-   "yld": 6.15,
+   "yld": 6.17,
    "note": "yield TTM 5.8% ขัดกับ seed 1.8% — ตรวจว่ารวมปันผลหุ้น/พิเศษหรือไม่"
   },
   "GULF": {
-   "price": 61.0,
-   "prevClose": 63.25,
-   "asOf": "2026-11-17",
+   "price": 61.75,
+   "prevClose": 62.75,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 24.21,
+   "pe": 24.51,
    "pb": null,
-   "yld": 1.72
+   "yld": 1.7
   },
   "CPALL": {
-   "price": 50.0,
-   "prevClose": 47.0,
-   "asOf": "2026-11-17",
+   "price": 49.6,
+   "prevClose": 49.0,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 14.61,
-   "pb": 3.01,
-   "yld": 3.3
+   "pe": 14.5,
+   "pb": 2.98,
+   "yld": 3.33
   },
   "ADVANC": {
-   "price": 339.0,
-   "prevClose": 344.0,
-   "asOf": "2026-11-17",
+   "price": 340.0,
+   "prevClose": 343.0,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 18.83,
-   "pb": 19.28,
-   "yld": 10.11,
-   "yldCalc": 4.93,
+   "pe": 18.89,
+   "pb": 19.34,
+   "yld": 10.08,
+   "yldCalc": 4.92,
    "note": "Yield TTM 9.9% รวมปันผลพิเศษ · เครื่องคิดใช้ dps_recurring"
   },
   "BDMS": {
-   "price": 20.95,
-   "prevClose": 20.1,
-   "asOf": "2026-11-17",
+   "price": 20.45,
+   "prevClose": 19.8,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 21.82,
+   "pe": 21.3,
    "pb": null,
-   "yld": 3.6
+   "yld": 3.69
   },
   "WHAUP": {
-   "price": 7.28,
-   "prevClose": 7.3,
-   "asOf": "2026-11-17",
+   "price": 7.16,
+   "prevClose": 7.25,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 18.66,
+   "pe": 18.35,
    "pb": null,
-   "yld": 3.5
+   "yld": 3.55
   },
   "PTT": {
-   "price": 37.2,
+   "price": 37.4,
    "prevClose": 38.25,
-   "asOf": "2026-11-17",
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 8.57,
+   "pe": 8.62,
    "pb": null,
-   "yld": 5.68
+   "yld": 5.65
   },
   "PRM": {
-   "price": 8.66,
-   "prevClose": 8.7,
-   "asOf": "2026-11-17",
+   "price": 8.7,
+   "prevClose": 8.6,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 9.22,
+   "pe": 9.26,
    "pb": null,
-   "yld": 5.71
+   "yld": 5.69
   },
   "KTC": {
-   "price": 36.0,
+   "price": 36.1,
    "prevClose": 35.75,
-   "asOf": "2026-11-17",
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 11.0,
+   "pe": 11.04,
    "pb": null,
-   "yld": 5.02
+   "yld": 5.0
   },
   "TTW": {
-   "price": 9.98,
-   "prevClose": 10.1,
-   "asOf": "2026-11-17",
+   "price": 9.94,
+   "prevClose": 10.0,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 12.8,
+   "pe": 12.75,
    "pb": null,
-   "yld": 6.07
+   "yld": 6.1
   },
   "SIRI": {
-   "price": 1.42,
+   "price": 1.41,
    "prevClose": 1.42,
-   "asOf": "2026-11-17",
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 5.68,
+   "pe": 5.64,
    "pb": null,
-   "yld": 9.16
+   "yld": 9.23
   },
   "AP": {
-   "price": 8.18,
-   "prevClose": 8.0,
-   "asOf": "2026-11-17",
+   "price": 8.14,
+   "prevClose": 7.95,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 5.83,
+   "pe": 5.81,
    "pb": 0.55,
-   "yld": 6.36
+   "yld": 6.39
   },
   "HMPRO": {
-   "price": 6.26,
-   "prevClose": 6.2,
-   "asOf": "2026-11-17",
+   "price": 6.2,
+   "prevClose": 6.25,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 13.61,
+   "pe": 13.48,
    "pb": null,
-   "yld": 6.17
+   "yld": 6.23
   },
   "SABINA": {
    "price": 15.4,
-   "prevClose": 15.5,
-   "asOf": "2026-11-17",
+   "prevClose": 15.4,
+   "asOf": "2026-11-18",
    "src": "YF",
    "pe": 13.03,
    "pb": 2.93,
@@ -199,36 +199,36 @@
    "note": "ไม่มี DPS ที่ verify ได้ — ปล่อย null ไว้จนกว่าจะเช็คจาก SET"
   },
   "ICHI": {
-   "price": 14.3,
-   "prevClose": 14.4,
-   "asOf": "2026-11-17",
+   "price": 14.8,
+   "prevClose": 14.2,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 14.63,
-   "pb": 3.36,
-   "yld": 7.69,
+   "pe": 15.14,
+   "pb": 3.48,
+   "yld": 7.43,
    "note": "payout implied >100% — ปันผลเกินกำไร TTM"
   },
   "SCC": {
-   "price": 238.0,
-   "prevClose": 240.0,
-   "asOf": "2026-11-17",
+   "price": 237.0,
+   "prevClose": 238.0,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 21.33,
+   "pe": 21.24,
    "pb": null,
-   "yld": 2.47
+   "yld": 2.48
   },
   "RATCH": {
-   "price": 36.5,
-   "prevClose": 36.75,
-   "asOf": "2026-11-17",
+   "price": 36.3,
+   "prevClose": 36.5,
+   "asOf": "2026-11-18",
    "src": "YF",
-   "pe": 14.25,
+   "pe": 14.18,
    "pb": null,
-   "yld": 4.45
+   "yld": 4.47
   }
  },
  "market": {
-  "set_close": 7401.85,
-  "set_close_date": "2026-11-17"
+  "set_close": 7350.83,
+  "set_close_date": "2026-11-18"
  }
 }
